@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emran Hossain - Social Entrepreneur & Innovator</title>
+    <meta name="description"
+        content="Social entrepreneur working in women's empowerment and child education. Founder, Chairman and Chief Executive Officer.">
+    <meta name="author" content="Emran Hossain">
+    <meta name="keywords"
+        content="social entrepreneur, women empowerment, child education, founder, CEO">
+
+    <meta property="og:title" content="Emran Hossain - Social Entrepreneur & Innovator">
+    <meta property="og:description"
+        content="Working for People, Dreaming for Society. Social entrepreneur focused on women's empowerment and child education.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            DEFAULT: 'hsl(0, 72%, 51%)',
+                            foreground: 'hsl(0, 0%, 98%)',
+                            glow: 'hsl(0, 72%, 61%)'
+                        },
+                        accent: {
+                            DEFAULT: 'hsl(348, 83%, 47%)',
+                            foreground: 'hsl(0, 0%, 98%)',
+                            glow: 'hsl(348, 83%, 57%)'
+                        },
+                        card: {
+                            DEFAULT: 'hsl(0, 0%, 100%)',
+                            foreground: 'hsl(0, 0%, 8%)'
+                        },
+                        muted: {
+                            DEFAULT: 'hsl(0, 0%, 95%)',
+                            foreground: 'hsl(0, 0%, 45%)'
+                        },
+                        border: 'hsl(0, 0%, 90%)',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'fade-in-left': 'fadeInLeft 1s ease-out 0.2s both',
+                        'fade-in-right': 'fadeInRight 1s ease-out 0.4s both',
+                        'pulse-glow': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            'from': {
+                                opacity: '0',
+                                transform: 'translateY(30px)'
+                            },
+                            'to': {
+                                opacity: '1',
+                                transform: 'translateY(0)'
+                            }
+                        },
+                        fadeInLeft: {
+                            'from': {
+                                opacity: '0',
+                                transform: 'translateX(-30px)'
+                            },
+                            'to': {
+                                opacity: '1',
+                                transform: 'translateX(0)'
+                            }
+                        },
+                        fadeInRight: {
+                            'from': {
+                                opacity: '0',
+                                transform: 'translateX(30px)'
+                            },
+                            'to': {
+                                opacity: '1',
+                                transform: 'translateX(0)'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --primary-color: #1d4ed8;
+            --secondary-color: #4b5563;
+            --accent-color: #10b981;
+            --background-color: #f8fafc;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(135deg, hsl(0, 0%, 98%) 0%, hsl(0, 0%, 96%) 50%, hsl(0, 0%, 98%) 100%);
+            background-attachment: fixed;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-section {
+            min-height: 100vh;
+            padding-bottom: 80px;
+        }
+
+        .projects-section {
+            margin-top: 100px;
+            padding-top: 80px;
+        }
+
+        .btn-hero-primary {
+            background: hsl(0, 72%, 51%);
+            color: hsl(0, 0%, 98%);
+            border: 1px solid hsl(0, 72%, 51%, 0.2);
+            box-shadow: 0 4px 20px hsl(0, 72%, 51%, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-hero-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px hsl(0, 72%, 51%, 0.25);
+        }
+
+        .btn-hero-secondary {
+            background: hsl(0, 0%, 100%);
+            color: hsl(0, 0%, 8%);
+            border: 1px solid hsl(0, 0%, 90%);
+            box-shadow: 0 4px 20px hsl(0, 0%, 0%, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-hero-secondary:hover {
+            transform: scale(1.05);
+            background: hsl(0, 0%, 100%);
+        }
+
+        .social-icon {
+            transition: all 0.3s ease;
+            filter: drop-shadow(0 0 8px transparent);
+        }
+
+        .social-icon:hover {
+            transform: scale(1.1);
+            color: hsl(0, 72%, 51%);
+            filter: drop-shadow(0 0 8px hsl(0, 72%, 51%, 0.3));
+        }
+
+        .professional-card {
+            background: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(0, 0%, 99%) 100%);
+            border: 1px solid hsl(0, 0%, 90%);
+            box-shadow: 0 8px 32px hsl(0, 0%, 0%, 0.08);
+            transition: all 0.5s ease;
+        }
+
+        .professional-card:hover {
+            box-shadow: 0 20px 60px -12px hsl(0, 0%, 0%, 0.1);
+            border-color: hsl(0, 72%, 51%, 0.2);
+        }
+
+        .project-card {
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover .project-arrow {
+            color: hsl(0, 72%, 51%);
+            transform: rotate(45deg);
+        }
+
+        .project-card:hover .project-title {
+            color: hsl(0, 72%, 51%);
+        }
+
+        .text-hero {
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .text-subtitle {
+            font-size: clamp(1.25rem, 4vw, 1.5rem);
+            font-weight: 600;
+        }
+
+        .text-tagline {
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .text-hero {
+                font-size: 3rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes typewriter {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Particle animation */
+        @keyframes moveParticles {
+            0% { transform: translateX(0) translateY(0); }
+            100% { transform: translateX(100px) translateY(100px); }
+        }
+
+        /* Utility Classes */
+        .animate-fade-in { animation: fade-in 1s ease-out forwards; }
+        .animate-typewriter { animation: typewriter 3s steps(40, end) forwards; }
+        .animate-blink { animation: blink 1s infinite; }
+        .animate-pulse { animation: pulse 1s ease-in-out infinite; }
+        .animate-moveParticles { animation: moveParticles 20s linear infinite; }
+
+        .gradient-background {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+        }
+
+        .card-glow {
+            background: rgba(250, 250, 254, 0.7);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.1);
+        }
+
+        .typewriter-container {
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+        }
+
+        .typewriter-text {
+            display: inline-block;
+            overflow: hidden;
+            white-space: normal;
+            max-width: 100%;
+        }
+
+        .tag {
+            transition: all 0.3s ease;
+        }
+
+        .tag:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Background particles */
+        .background-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.1);
+            opacity: 0.3;
+            animation: moveParticles 20s infinite;
+        }
+
+        .circle { border-radius: 50%; }
+        .square { border-radius: 0%; }
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 35px solid rgba(0, 0, 0, 0.1);
+        }
+
+        /* Custom sizes and colors */
+        .particle1 { width: 30px; height: 30px; background-color: rgba(0, 123, 255, 0.3); }
+        .particle2 { width: 40px; height: 40px; background-color: rgba(40, 167, 69, 0.3); }
+        .particle3 { width: 50px; height: 50px; background-color: rgba(255, 193, 7, 0.3); }
+        .particle4 { width: 25px; height: 25px; background-color: rgba(255, 0, 0, 0.3); }
+        .particle5 { width: 35px; height: 35px; background-color: rgba(0, 255, 255, 0.3); }
+        .particle6 { width: 45px; height: 45px; background-color: rgba(255, 105, 180, 0.3); }
+
+        /* Advanced Scroll Indicator */
+        .scroll-indicator-container {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .scroll-indicator-container:hover {
+            transform: translateX(-50%) translateY(-5px);
+        }
+
+        .scroll-text {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: hsl(0, 0%, 45%);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .scroll-mouse {
+            position: relative;
+            width: 24px;
+            height: 36px;
+            border: 2px solid hsl(0, 0%, 45%);
+            border-radius: 12px;
+        }
+
+        .scroll-wheel {
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 6px;
+            background-color: hsl(0, 0%, 45%);
+            border-radius: 50%;
+            animation: scrollWheel 1.5s ease-in-out infinite;
+        }
+
+        @keyframes scrollWheel {
+            0% {
+                transform: translateX(-50%) translateY(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translateX(-50%) translateY(10px);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateX(-50%) translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .scroll-arrow {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 16px;
+            border-right: 2px solid hsl(0, 0%, 45%);
+            border-bottom: 2px solid hsl(0, 0%, 45%);
+            transform: translateX(-50%) rotate(45deg);
+            animation: scrollArrow 1.5s ease-in-out infinite;
+        }
+
+        @keyframes scrollArrow {
+            0% {
+                transform: translateX(-50%) rotate(45deg) translateY(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translateX(-50%) rotate(45deg) translateY(5px);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateX(-50%) rotate(45deg) translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Hero fade effect */
+        .hero-fade {
+            opacity: 0.3;
+            transform: scale(0.95);
+            transition: all 0.8s ease-in-out;
+        }
+
+        .hero-normal {
+            opacity: 1;
+            transform: scale(1);
+            transition: all 0.8s ease-in-out;
+        }
+
+        /* Side Menu Styles */
+        .side-menu {
+            position: fixed;
+            top: 50%;
+            left: 30px;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 20px 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .side-menu:hover {
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .menu-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .menu-nav-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .menu-nav-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            color: hsl(0, 0%, 45%);
+            background: transparent;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .menu-nav-link:hover {
+            color: hsl(0, 72%, 51%);
+            background: hsl(0, 72%, 51%, 0.1);
+            transform: scale(1.1);
+        }
+
+        .menu-nav-link.active {
+            color: hsl(0, 72%, 51%);
+            background: hsl(0, 72%, 51%, 0.1);
+        }
+
+        .menu-tooltip {
+            position: absolute;
+            left: 100%;
+            margin-left: 15px;
+            background: hsl(0, 72%, 51%);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .menu-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            transform: translateY(-50%);
+            border-width: 6px;
+            border-style: solid;
+            border-color: transparent hsl(0, 72%, 51%) transparent transparent;
+        }
+
+        .menu-nav-link:hover .menu-tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .side-menu {
+                left: 15px;
+                padding: 15px 10px;
+            }
+            
+            .menu-nav-link {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-inter antialiased text-gray-900">
+    <!-- Side Menu -->
+    <nav class="side-menu md:block hidden">
+        <div class="menu-nav">
+            <div class="menu-nav-item">
+                <a href="#hero-section" class="menu-nav-link active" onclick="setActive(this)">
+                    <i data-lucide="home" class="w-5 h-5"></i>
+                    <span class="menu-tooltip">Home</span>
+                </a>
+            </div>
+            <div class="menu-nav-item">
+                <a href="#about-section" class="menu-nav-link" onclick="setActive(this)">
+                    <i data-lucide="user" class="w-5 h-5"></i>
+                    <span class="menu-tooltip">About</span>
+                </a>
+            </div>
+            <div class="menu-nav-item">
+                <a href="#projects" class="menu-nav-link" onclick="setActive(this)">
+                    <i data-lucide="briefcase" class="w-5 h-5"></i>
+                    <span class="menu-tooltip">Projects</span>
+                </a>
+            </div>
+            <div class="menu-nav-item">
+                <a href="#" class="menu-nav-link">
+                    <i data-lucide="book-open" class="w-5 h-5"></i>
+                    <span class="menu-tooltip">Publications</span>
+                </a>
+            </div>
+            <div class="menu-nav-item">
+                <a href="#" class="menu-nav-link">
+                    <i data-lucide="award" class="w-5 h-5"></i>
+                    <span class="menu-tooltip">Awards</span>
+                </a>
+            </div>
+            <div class="menu-nav-item">
+                <a href="#" class="menu-nav-link">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                    <span class="menu-tooltip">Contact</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero-section" class="min-h-screen flex items-center justify-center px-6 py-20 hero-section relative hero-normal md:w-4/5 md:mx-auto">
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="grid lg:grid-cols-2  gap-16 items-center">
+                <!-- Content Section -->
+                <div class="space-y-8 animate-fade-in-left">
+                    <!-- Name & Title -->
+                    <div class="space-y-2">
+                        <!-- Name with gradient -->
+                        <div class="space-y-4">
+                            <!-- Name with gradient -->
+                            <h1 class="text-hero bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-extrabold">
+                                 <span class=" text-orange-500">Emran</span>
+                                 <span class=" text-gray-600">Hossain
+
+                                 </span>
+                            <!-- Subtitle with font weight and color -->
+                            <h2 class="text-subtitle text-primary font-semibold text-2xl">
+                                Founder, Chairman and Chief Executive Officer
+                            </h2>
+                        </div>
+
+                        <!-- Tagline -->
+                        <p class="text-tagline text-muted-foreground leading-relaxed max-w-2xl mx-auto font-medium text-lg">
+                            Working for People, Dreaming for Society
+                        </p>
+                        <!-- Short Introduction -->
+                        <p class="text-tagline text-muted-foreground leading-relaxed max-w-2xl mx-auto font-medium text-base mt-4">
+                            I'm Emran, a social entrepreneur working in women's empowerment and child education.
+                        </p>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <button class="btn-hero-primary px-8 py-4 rounded-xl font-semibold flex items-center justify-center group">
+                            <i data-lucide="download" class="w-5 h-5 mr-2 group-hover:animate-bounce"></i>
+                            Download CV
+                        </button>
+
+                        <button class="btn-hero-secondary px-8 py-4 rounded-xl font-semibold flex items-center justify-center group" onclick="scrollToProjects()">
+                            <i data-lucide="external-link" class="w-5 h-5 mr-2 group-hover:rotate-45 transition-transform duration-300"></i>
+                            View Projects
+                        </button>
+                        
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex space-x-6 pt-8 justify-center md:justify-start">
+                        <a href="https://linkedin.com/in/emranhossain" target="_blank" rel="noopener noreferrer" class="social-icon text-muted-foreground" aria-label="LinkedIn Profile">
+                            <i data-lucide="linkedin" class="w-6 h-6"></i>
+                        </a>
+
+                        <a href="https://twitter.com/emranhossain" target="_blank" rel="noopener noreferrer" class="social-icon text-muted-foreground" aria-label="Twitter Profile">
+                            <i data-lucide="twitter" class="w-6 h-6"></i>
+                        </a>
+
+                        <a href="https://github.com/emranhossain" target="_blank" rel="noopener noreferrer" class="social-icon text-muted-foreground" aria-label="GitHub Profile">
+                            <i data-lucide="github" class="w-6 h-6"></i>
+                        </a>
+
+                        <a href="mailto:emran@example.com" class="social-icon text-muted-foreground" aria-label="Email Contact">
+                            <i data-lucide="mail" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Image Section -->
+                <div class="animate-fade-in-right">
+                    <div class="relative">
+                        <!-- Glow Effect -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-accent/10 blur-3xl -z-10 scale-110"></div>
+
+                        <!-- Professional Card -->
+                        <div class="professional-card p-8 relative overflow-hidden rounded-2xl">
+                            <!-- Subtle background pattern -->
+                            <div class="absolute inset-0 opacity-5">
+                                <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, hsl(0, 72%, 51%, 0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, hsl(348, 83%, 47%, 0.1) 0%, transparent 50%);">
+                                </div>
+                            </div>
+
+                            <div class="relative overflow-hidden rounded-xl z-10">
+                                <img src="images/handsOnFace.png" alt="Emran Hossain - Social Entrepreneur" class="w-full h-auto mx-auto object-cover transition-transform duration-700 hover:scale-105" />
+
+                                <!-- Elegant Overlay -->
+                                <div class="absolute inset-0 bg-gradient-to-t from-white/10 via-transparent to-transparent"></div>
+
+                                <!-- Red accent border -->
+                                <div class="absolute inset-0 border-2 border-primary/20 rounded-xl"></div>
+                            </div>
+
+                            <!-- Status Indicator -->
+                            <div class="flex items-center justify-center mt-6 z-10 relative">
+                                <div class="flex items-center space-x-2 px-4 py-2 bg-accent/5 rounded-full border border-accent/20 backdrop-blur-sm">
+                                    <div class="w-2 h-2 bg-accent rounded-full animate-pulse-glow"></div>
+                                    <span class="text-sm font-medium text-accent">Available for new opportunities</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Scroll Indicator -->
+            <div class="scroll-indicator-container pt-10" onclick="scrollToProjects()">
+                <div class="scroll-text">Explore My Work</div>
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+                <div class="scroll-arrow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about-section" class="py-24 px-6 relative overflow-hidden">
+        <!-- Background Animation (Particles) -->
+        <div class="background-animation">
+            <!-- Particles -->
+            <div class="particle particle1 circle" style="left: 10%; top: 15%; animation-delay: 0s;"></div>
+            <div class="particle particle2 square" style="left: 30%; top: 50%; animation-delay: 2s;"></div>
+            <div class="particle particle3 triangle" style="left: 50%; top: 30%; animation-delay: 4s;"></div>
+            <div class="particle particle4 circle" style="left: 70%; top: 70%; animation-delay: 6s;"></div>
+            <div class="particle particle5 square" style="left: 80%; top: 40%; animation-delay: 8s;"></div>
+            <div class="particle particle6 triangle" style="left: 90%; top: 20%; animation-delay: 10s;"></div>
+            <div class="particle particle1 circle" style="left: 15%; top: 70%; animation-delay: 1s;"></div>
+            <div class="particle particle2 square" style="left: 40%; top: 20%; animation-delay: 3s;"></div>
+            <div class="particle particle3 triangle" style="left: 60%; top: 60%; animation-delay: 5s;"></div>
+            <div class="particle particle4 circle" style="left: 85%; top: 30%; animation-delay: 7s;"></div>
+            <div class="particle particle5 square" style="left: 25%; top: 80%; animation-delay: 9s;"></div>
+            <div class="particle particle6 triangle" style="left: 75%; top: 10%; animation-delay: 11s;"></div>
+        </div>
+
+        <!-- Main Card -->
+        <div class="max-w-4xl mx-auto">
+            <!-- Holographic Card Border -->
+            <div class="relative group">
+                <!-- Card Content -->
+                <div class="relative card-glow rounded-2xl md:p-12 p-7 border border-gray-300/40 overflow-hidden professional-card">
+                    <!-- Title -->
+                    <div class="relative mb-8">
+                        <h1 class="md:text-5xl text-3xl font-semibold text-primary mb-2 ">
+                            ABOUT ME
+                        </h1>
+                        <div class="h-1 w-32 bg-primary rounded-full"></div>
+                    </div>
+
+                    <!-- Bio Text -->
+                    <div class="relative">
+                        <p class="text-base leading-relaxed text-gray-700 ">
+                            I’m Emran Hossain, a social entrepreneur, author, and changemaker dedicated to innovation, education, and community empowerment. Through my ventures, my work spans diverse fields, including technology, the environment, literacy, agriculture, and community upliftment. Recognized with awards like Best Youth Organizer (2021) and Top Scout (2018), I believe in turning vision into action. Join me in exploring lots of initiatives designed to inspire, educate, and most importantly make a difference in society.
+
+                        </p>
+                    </div>
+
+                    <!-- Tags -->
+                    <div class="mt-8 gap-2 grid grid-cols-2 md:grid-cols-4 text-center">
+                        <div class="tag group">
+                            <span class="inline-block px-4 py-2 bg-blue-100 border border-blue-500/40 rounded-lg text-blue-600 font-medium text-sm">
+                                Social Innovator
+                            </span>
+                        </div>
+                        <div class="tag group">
+                            <span class="inline-block px-4 py-2 bg-green-100 border border-green-500/40 rounded-lg text-green-600 font-medium text-sm">
+                                Women Empowerment
+                            </span>
+                        </div>
+                        <div class="tag group">
+                            <span class="inline-block px-4 py-2 bg-purple-100 border border-purple-500/40 rounded-lg text-purple-600 font-medium text-sm">
+                                Child Education
+                            </span>
+                        </div>
+                        <div class="tag group">
+                            <span class="inline-block px-4 py-2 bg-orange-100 border border-orange-500/40 rounded-lg text-orange-600 font-medium text-sm">
+                                Community Builder
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Status Indicator -->
+                    <div class="absolute top-4 right-4 flex items-center gap-2">
+                        <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                        <span class="text-xs font-medium text-green-600 uppercase tracking-wider">Active</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Smooth scroll functions
+        function scrollToProjects() {
+            document.getElementById('projects').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        function scrollToAbout() {
+            document.getElementById('about-section').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Set active menu item
+        function setActive(element) {
+            // Remove active class from all links
+            document.querySelectorAll('.menu-nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Add active class to clicked link
+            element.classList.add('active');
+        }
+
+        // Update active menu item on scroll
+        function updateActiveMenu() {
+            const sections = document.querySelectorAll('#hero-section, #about-section, #projects');
+            const menuLinks = document.querySelectorAll('.menu-nav-link');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (window.scrollY >= (sectionTop - sectionHeight / 3)) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            menuLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Hero fade effect on scroll
+        let heroSection = document.getElementById('hero-section');
+        let aboutSection = document.getElementById('about-section');
+        
+        function isElementInViewport(el) {
+            let rect = el.getBoundingClientRect();
+            return (
+                rect.top <= ((window.innerHeight || document.documentElement.clientHeight) * 0.3) &&
+                rect.bottom >= 0
+            );
+        }
+
+        function handleScroll() {
+            if (isElementInViewport(aboutSection)) {
+                heroSection.classList.remove('hero-normal');
+                heroSection.classList.add('hero-fade');
+            } else {
+                heroSection.classList.remove('hero-fade');
+                heroSection.classList.add('hero-normal');
+            }
+            
+            // Update active menu item
+            updateActiveMenu();
+        }
+
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add scroll event listener for hero fade effect
+            window.addEventListener('scroll', handleScroll);
+            
+            // Trigger once on load to check initial position
+            handleScroll();
+
+            // Fade in elements when they come into view
+            const fadeElements = document.querySelectorAll('.fade-in-up, .animate-fade-in-left, .animate-fade-in-right');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationDelay = '0.2s';
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+
+            // Animate project cards on hover
+            const projectCards = document.querySelectorAll('.project-card');
+            projectCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

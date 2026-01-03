@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emran Hossain - Portfolio</title>
+    <meta name="description"
+        content="Social entrepreneur working in women's empowerment and child education. Founder, Chairman and Chief Executive Officer.">
+    <meta name="author" content="Emran Hossain">
+    <meta name="keywords" content="social entrepreneur, women empowerment, child education, founder, CEO">
+
+    <meta property="og:title" content="Emran Hossain - Social Entrepreneur & Innovator">
+    <meta property="og:description"
+        content="Working for People, Dreaming for Society. Social entrepreneur focused on women's empowerment and child education.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        heading: ['Playfair Display', 'serif'],
+                        poppins: ['Poppins', 'sans-serif']
+                    },
+                    colors: {
+                        primary: {
+                            DEFAULT: 'hsl(0, 72%, 51%)',
+                            foreground: 'hsl(0, 0%, 98%)',
+                            glow: 'hsl(0, 72%, 61%)'
+                        },
+                        accent: {
+                            DEFAULT: 'hsl(348, 83%, 47%)',
+                            foreground: 'hsl(0, 0%, 98%)',
+                            glow: 'hsl(348, 83%, 57%)'
+                        },
+                        card: {
+                            DEFAULT: 'hsl(0, 0%, 100%)',
+                            foreground: 'hsl(0, 0%, 8%)'
+                        },
+                        muted: {
+                            DEFAULT: 'hsl(0, 0%, 95%)',
+                            foreground: 'hsl(0, 0%, 45%)'
+                        },
+                        border: 'hsl(0, 0%, 90%)',
+                        'book-primary': '#FF6B35',
+                        'book-secondary': '#1A365D',
+                        'book-accent': '#FFD93D'
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'fade-in-left': 'fadeInLeft 1s ease-out 0.2s both',
+                        'fade-in-right': 'fadeInRight 1s ease-out 0.4s both',
+                        'pulse-glow': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                        'blob': 'blob 10s infinite',
+                        'fade-in': 'fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards'
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            'from': { opacity: '0', transform: 'translateY(30px)' },
+                            'to': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        fadeInLeft: {
+                            'from': { opacity: '0', transform: 'translateX(-30px)' },
+                            'to': { opacity: '1', transform: 'translateX(0)' }
+                        },
+                        fadeInRight: {
+                            'from': { opacity: '0', transform: 'translateX(30px)' },
+                            'to': { opacity: '1', transform: 'translateX(0)' }
+                        },
+                        pulse: {
+                            '0%, 100%': { transform: 'scale(1)' },
+                            '50%': { transform: 'scale(1.05)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' }
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="font-inter antialiased">
+    <div class="noise-overlay"></div>
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-slate-50">
+        <div
+            class="absolute top-[-20%] left-[-10%] w-[800px] h-[800px] bg-blue-200/40 rounded-full mix-blend-multiply filter blur-[100px] opacity-70 animate-blob"></div>
+        <div
+            class="absolute top-[-10%] right-[-20%] w-[700px] h-[700px] bg-purple-200/40 rounded-full mix-blend-multiply filter blur-[100px] opacity-70 animate-blob animation-delay-2000"></div>
+        <div
+            class="absolute bottom-[-20%] left-[20%] w-[800px] h-[800px] bg-emerald-100/60 rounded-full mix-blend-multiply filter blur-[100px] opacity-70 animate-blob animation-delay-4000"></div>
+    </div>
+
+    <header class="relative z-10">
+        <div class="flex md:justify-around md:p-5 p-3 md:w-4/5 mx-auto">
+            <div class="z-25 flex-1">
+                <div class="flex items-center">
+                    <div class="rounded-full flex flex-col items-center justify-center relative -top-3">
+                        <h1 class="text-orange-600 font-bold text-3xl dancing-script-font block">Emran</h1>
+                        <h1 class="dancing-script-font ml-3 text-black font-bold text-3xl -m-8 p-0">Hossain</h1>
+                    </div>
+                </div>
+            </div>
+
+            <button id="menu-toggle"
+                class="text-white text-xl flex items-center justify-center z-[1201] bg-orange-600 px-4 py-2 rounded-3xl hover:bg-orange-700 transition-colors duration-200">
+                MENU
+            </button>
+        </div>
+
+        <div id="navbar"
+            class="fixed top-0 right-0 h-full w-[280px] bg-orange-600 shadow-lg z-[1200] transform transition-transform duration-500 ease-in-out translate-x-full">
+            <div class="flex justify-between items-center p-6 border-b border-orange-500/30">
+                <button id="close-btn"
+                    class="text-white hover:text-orange-200 transition-colors duration-200 p-2 rounded-md hover:bg-orange-700/50 z-50"
+                    aria-label="Close menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m18 6-12 12"></path>
+                        <path d="m6 6 12 12"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <nav class="px-6 py-8 z-50">
+                <ul class="space-y-4">
+                    <li>
+                        <a href="#home"
+                            class="nav-link block text-white hover:text-orange-200 hover:bg-orange-700/50 px-4 py-3 rounded-md text-lg font-medium transition-all duration-200 border-l-4 border-transparent hover:border-orange-200">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about"
+                            class="nav-link block text-white hover:text-orange-200 hover:bg-orange-700/50 px-4 py-3 rounded-md text-lg font-medium transition-all duration-200 border-l-4 border-transparent hover:border-orange-200">
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#training"
+                            class="nav-link block text-white hover:text-orange-200 hover:bg-orange-700/50 px-4 py-3 rounded-md text-lg font-medium transition-all duration-200 border-l-4 border-transparent hover:border-orange-200">
+                            Training
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#riseAboveAll"
+                            class="nav-link block text-white hover:text-orange-200 hover:bg-orange-700/50 px-4 py-3 rounded-md text-lg font-medium transition-all duration-200 border-l-4 border-transparent hover:border-orange-200">
+                            Rise Above All
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#teenageAcademy"
+                            class="nav-link block text-white hover:text-orange-200 hover:bg-orange-700/50 px-4 py-3 rounded-md text-lg font-medium transition-all duration-200 border-l-4 border-transparent hover:border-orange-200">
+                            Teenage Academy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#hrServices"
+                            class="nav-link block text-white hover:text-orange-200 hover:bg-orange-700/50 px-4 py-3 rounded-md text-lg font-medium transition-all duration-200 border-l-4 border-transparent hover:border-orange-200">
+                            HR Services
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#merchandise"
+                            class="nav-link block text-white hover:text-orange-200 hover:bg-orange-700/50 px-4 py-3 rounded-md text-lg font-medium transition-all duration-200 border-l-4 border-transparent hover:border-orange-200">
+                            Merchandise
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#ourBooks"
+                            class="nav-link block text-white hover:text-orange-200 hover:bg-orange-700/50 px-4 py-3 rounded-md text-lg font-medium transition-all duration-200 border-l-4 border-transparent hover:border-orange-200">
+                            Our Books
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact"
+                            class="nav-link block text-white hover:text-orange-200 hover:bg-orange-700/50 px-4 py-3 rounded-md text-lg font-medium transition-all duration-200 border-l-4 border-transparent hover:border-orange-200">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="absolute bottom-8 left-0 w-full px-6">
+                <div class="border-t border-orange-500/30 pt-6">
+                    <h3 class="text-white font-semibold text-sm mb-4 text-center">Follow Us</h3>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#"
+                            class="text-white hover:text-orange-200 transition-colors duration-200 p-2 rounded-full hover:bg-orange-700/50"
+                            aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="text-white hover:text-orange-200 transition-colors duration-200 p-2 rounded-full hover:bg-orange-700/50"
+                            aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m16 8 6-6M22 2l-7 7-3-3"></path>
+                                <path d="M16 2h6v6"></path>
+                                <path d="M22 22H2V2h20z"></path>
+                                <path d="M7 17v-5"></path>
+                                <path d="M12 17v-5"></path>
+                                <path d="M17 17v-3a2 2 0 0 0-2-2 2 2 0 0 0-2 2v3"></path>
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="text-white hover:text-orange-200 transition-colors duration-200 p-2 rounded-full hover:bg-orange-700/50"
+                            aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="text-white hover:text-orange-200 transition-colors duration-200 p-2 rounded-full hover:bg-orange-700/50"
+                            aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17">
+                                </path>
+                                <path d="m10 15 5-3-5-3z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="overlay"
+            class="fixed inset-0 bg-black/50 z-[1100] opacity-0 pointer-events-none transition-opacity duration-300"></div>
+    </header>
+
+    <main id="page-content" class="relative z-10">
+        <nav class="side-menu md:block hidden">
+            <div class="menu-nav">
+                <div class="menu-nav-item">
+                    <a href="#home" class="menu-nav-link active" onclick="setActive(this)">
+                        <i data-lucide="home" class="w-5 h-5"></i>
+                        <span class="menu-tooltip">Home</span>
+                    </a>
+                </div>
+                <div class="menu-nav-item">
+                    <a href="#about" class="menu-nav-link" onclick="setActive(this)">
+                        <i data-lucide="user" class="w-5 h-5"></i>
+                        <span class="menu-tooltip">About</span>
+                    </a>
+                </div>
+                <div class="menu-nav-item">
+                    <a href="#projects" class="menu-nav-link" onclick="setActive(this)">
+                        <i data-lucide="briefcase" class="w-5 h-5"></i>
+                        <span class="menu-tooltip">Projects</span>
+                    </a>
+                </div>
+                <div class="menu-nav-item">
+                    <a href="#ourBooks" class="menu-nav-link">
+                        <i data-lucide="book-open" class="w-5 h-5"></i>
+                        <span class="menu-tooltip">Publications</span>
+                    </a>
+                </div>
+                <div class="menu-nav-item">
+                    <a href="#training" class="menu-nav-link">
+                        <i data-lucide="award" class="w-5 h-5"></i>
+                        <span class="menu-tooltip">Awards</span>
+                    </a>
+                </div>
+                <div class="menu-nav-item">
+                    <a href="#contact" class="menu-nav-link">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                        <span class="menu-tooltip">Contact</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <section id="home"
+            class="min-h-screen flex items-center justify-center px-6 py-20 hero-section relative hero-normal md:w-4/5 md:mx-auto">
+            <div class="max-w-7xl mx-auto w-full">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-8 animate-fade-in-left">
+                        <div class="space-y-2">
+                            <div class="space-y-4">
+                                <h1 class="text-hero bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-extrabold">
+                                    <span class="text-orange-500">Emran</span>
+                                    <span class="text-gray-600">Hossain</span>
+                                </h1>
+                                <h2 class="text-subtitle text-primary font-semibold text-2xl">
+                                    Founder, Chairman and Chief Executive Officer
+                                </h2>
+                            </div>
+
+                            <p class="text-tagline text-muted-foreground leading-relaxed max-w-2xl mx-auto font-medium text-lg">
+                                Working for People, Dreaming for Society
+                            </p>
+                            <p class="text-tagline text-muted-foreground leading-relaxed max-w-2xl mx-auto font-medium text-base mt-4">
+                                I'm Emran, a social entrepreneur working in women's empowerment and child education.
+                            </p>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                            <button class="btn-hero-primary px-8 py-4 rounded-xl font-semibold flex items-center justify-center group">
+                                <i data-lucide="download" class="w-5 h-5 mr-2 group-hover:animate-bounce"></i>
+                                Download CV
+                            </button>
+
+                            <button class="btn-hero-secondary px-8 py-4 rounded-xl font-semibold flex items-center justify-center group"
+                                onclick="scrollToProjects()">
+                                <i data-lucide="external-link"
+                                    class="w-5 h-5 mr-2 group-hover:rotate-45 transition-transform duration-300"></i>
+                                View Projects
+                            </button>
+                        </div>
+
+                        <div class="flex space-x-6 pt-8 justify-center md:justify-start">
+                            <a href="https://linkedin.com/in/emranhossain" target="_blank" rel="noopener noreferrer"
+                                class="social-icon text-muted-foreground" aria-label="LinkedIn Profile">
+                                <i data-lucide="linkedin" class="w-6 h-6"></i>
+                            </a>
+                            <a href="https://twitter.com/emranhossain" target="_blank" rel="noopener noreferrer"
+                                class="social-icon text-muted-foreground" aria-label="Twitter Profile">
+                                <i data-lucide="twitter" class="w-6 h-6"></i>
+                            </a>
+                            <a href="https://github.com/emranhossain" target="_blank" rel="noopener noreferrer"
+                                class="social-icon text-muted-foreground" aria-label="GitHub Profile">
+                                <i data-lucide="github" class="w-6 h-6"></i>
+                            </a>
+                            <a href="mailto:emran@example.com" class="social-icon text-muted-foreground" aria-label="Email Contact">
+                                <i data-lucide="mail" class="w-6 h-6"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="animate-fade-in-right">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-accent/10 blur-3xl -z-10 scale-110"></div>
+                            <div class="professional-card p-8 relative overflow-hidden rounded-2xl">
+                                <div class="absolute inset-0 opacity-5">
+                                    <div class="absolute inset-0"
+                                        style="background-image: radial-gradient(circle at 25% 25%, hsl(0, 72%, 51%, 0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, hsl(348, 83%, 47%, 0.1) 0%, transparent 50%);">
+                                    </div>
+                                </div>
+
+                                <div class="relative overflow-hidden rounded-xl">
+                                    <img src="images/handsOnFace.png" alt="Emran Hossain - Social Entrepreneur"
+                                        class="w-full h-auto mx-auto object-cover transition-transform duration-700 hover:scale-105" />
+                                    <div class="absolute inset-0 bg-gradient-to-t from-white/10 via-transparent to-transparent"></div>
+                                    <div class="absolute inset-0 border-2 border-primary/20 rounded-xl"></div>
+                                </div>
+
+                                <div class="flex items-center justify-center mt-6 z-10 relative">
+                                    <div class="flex items-center space-x-2 px-4 py-2 bg-accent/5 rounded-full border border-accent/20 backdrop-blur-sm">
+                                        <div class="w-2 h-2 bg-accent rounded-full animate-pulse-glow"></div>
+                                        <span class="text-sm font-medium text-accent">Available for new opportunities</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scroll-indicator-container pt-10" onclick="scrollToProjects()">
+                    <div class="scroll-text">Explore My Work</div>
+                    <div class="scroll-mouse">
+                        <div class="scroll-wheel"></div>
+                    </div>
+                    <div class="scroll-arrow"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-24 px-6 relative overflow-hidden">
+            <div class="background-animation">
+                <div class="particle particle1 circle" style="left: 10%; top: 15%; animation-delay: 0s;"></div>
+                <div class="particle particle2 square" style="left: 30%; top: 50%; animation-delay: 2s;"></div>
+                <div class="particle particle3 triangle" style="left: 50%; top: 30%; animation-delay: 4s;"></div>
+                <div class="particle particle4 circle" style="left: 70%; top: 70%; animation-delay: 6s;"></div>
+                <div class="particle particle5 square" style="left: 80%; top: 40%; animation-delay: 8s;"></div>
+                <div class="particle particle6 triangle" style="left: 90%; top: 20%; animation-delay: 10s;"></div>
+                <div class="particle particle1 circle" style="left: 15%; top: 70%; animation-delay: 1s;"></div>
+                <div class="particle particle2 square" style="left: 40%; top: 20%; animation-delay: 3s;"></div>
+                <div class="particle particle3 triangle" style="left: 60%; top: 60%; animation-delay: 5s;"></div>
+                <div class="particle particle4 circle" style="left: 85%; top: 30%; animation-delay: 7s;"></div>
+                <div class="particle particle5 square" style="left: 25%; top: 80%; animation-delay: 9s;"></div>
+                <div class="particle particle6 triangle" style="left: 75%; top: 10%; animation-delay: 11s;"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="relative group">
+                    <div class="relative card-glow rounded-2xl md:p-12 p-7 border border-gray-300/40 overflow-hidden professional-card">
+                        <div class="relative mb-8">
+                            <h1 class="md:text-5xl text-3xl font-semibold text-primary mb-2">ABOUT ME</h1>
+                            <div class="h-1 w-32 bg-primary rounded-full"></div>
+                        </div>
+
+                        <div class="relative">
+                            <p class="text-base leading-relaxed text-gray-700">
+                                I’m Emran Hossain, a social entrepreneur, author, and changemaker dedicated to innovation, education, and community empowerment. Through my ventures, my work spans diverse fields, including technology, the environment, literacy, agriculture, and community upliftment. Recognized with awards like Best Youth Organizer (2021) and Top Scout (2018), I believe in turning vision into action. Join me in exploring lots of initiatives designed to inspire, educate, and most importantly make a difference in society.
+                            </p>
+                        </div>
+
+                        <div class="mt-8 gap-2 grid grid-cols-2 md:grid-cols-4 text-center">
+                            <div class="tag group">
+                                <span class="inline-block px-4 py-2 bg-blue-100 border border-blue-500/40 rounded-lg text-blue-600 font-medium text-sm">
+                                    Social Innovator
+                                </span>
+                            </div>
+                            <div class="tag group">
+                                <span class="inline-block px-4 py-2 bg-green-100 border border-green-500/40 rounded-lg text-green-600 font-medium text-sm">
+                                    Women Empowerment
+                                </span>
+                            </div>
+                            <div class="tag group">
+                                <span class="inline-block px-4 py-2 bg-purple-100 border border-purple-500/40 rounded-lg text-purple-600 font-medium text-sm">
+                                    Child Education
+                                </span>
+                            </div>
+                            <div class="tag group">
+                                <span class="inline-block px-4 py-2 bg-orange-100 border border-orange-500/40 rounded-lg text-orange-600 font-medium text-sm">
+                                    Community Builder
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="absolute top-4 right-4 flex items-center gap-2">
+                            <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                            <span class="text-xs font-medium text-green-600 uppercase tracking-wider">Active</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="training"></div>
+        <section class="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in-up">
+                    <div class="flex justify-center mb-6">
+                        <div class="p-4 bg-primary/10 rounded-full">
+                            <i data-lucide="award" class="w-12 h-12 text-primary"></i>
+                        </div>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                        Awards & Recognition
+                    </h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="award-card p-8 rounded-2xl award-glow shimmer-effect fade-in-up flex flex-col items-center text-center" style="animation-delay: 0.1s">
+                        <div class="mb-6">
+                            <div class="p-4 bg-primary/10 rounded-full inline-flex">
+                                <i data-lucide="trophy" class="w-10 h-10 text-primary award-icon"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-center mb-3">
+                                <span class="inline-block px-3 py-1 text-xs font-semibold bg-primary/10 text-primary rounded-full">
+                                    2021
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 text-gray-900">শ্রেষ্ঠ যুব সংগঠক সম্মাননা</h3>
+                            <p class="text-muted-foreground text-sm">যুব ও ক্রীড়া মন্ত্রণালয় অধীন যুব উন্নয়ন অধিদপ্তর, ঝিনাইদহ</p>
+                        </div>
+                    </div>
+
+                    <div class="award-card p-8 rounded-2xl award-glow shimmer-effect fade-in-up flex flex-col items-center text-center" style="animation-delay: 0.2s">
+                        <div class="mb-6">
+                            <div class="p-4 bg-accent/10 rounded-full inline-flex">
+                                <i data-lucide="star" class="w-10 h-10 text-accent award-icon"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-center mb-3">
+                                <span class="inline-block px-3 py-1 text-xs font-semibold bg-accent/10 text-accent rounded-full">
+                                    2018
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 text-gray-900">শ্রেষ্ঠ স্কাউট</h3>
+                            <p class="text-muted-foreground text-sm">National Scout Organization Recognition</p>
+                        </div>
+                    </div>
+
+                    <div class="award-card p-8 rounded-2xl award-glow shimmer-effect fade-in-up flex flex-col items-center text-center" style="animation-delay: 0.3s">
+                        <div class="mb-6">
+                            <div class="p-4 bg-primary/10 rounded-full inline-flex">
+                                <i data-lucide="medal" class="w-10 h-10 text-primary award-icon"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-center mb-3">
+                                <span class="inline-block px-3 py-1 text-xs font-semibold bg-primary/10 text-primary rounded-full">
+                                    2018
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 text-gray-900">শ্রেষ্ঠ শিক্ষার্থী</h3>
+                            <p class="text-muted-foreground text-sm">Academic Excellence Award</p>
+                        </div>
+                    </div>
+
+                    <div class="award-card p-8 rounded-2xl award-glow shimmer-effect fade-in-up flex flex-col items-center text-center" style="animation-delay: 0.4s">
+                        <div class="mb-6">
+                            <div class="p-4 bg-accent/10 rounded-full inline-flex">
+                                <i data-lucide="book-open" class="w-10 h-10 text-accent award-icon"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-center mb-3">
+                                <span class="inline-block px-3 py-1 text-xs font-semibold bg-accent/10 text-accent rounded-full">
+                                    2021
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 text-gray-900">সেরা পাঠক</h3>
+                            <p class="text-muted-foreground text-sm">Outstanding Reader Recognition</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16 text-center fade-in-up">
+                    <div class="inline-flex flex-wrap justify-center items-center gap-8 p-8 bg-white/50 backdrop-blur-sm rounded-2xl border border-gray-200/50">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary mb-1">5+</div>
+                            <div class="text-sm text-muted-foreground">Major Awards</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-accent mb-1">10+</div>
+                            <div class="text-sm text-muted-foreground">Recognitions</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary mb-1">∞</div>
+                            <div class="text-sm text-muted-foreground">Impact</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="teenageAcademy"></div>
+        <div id="merchandise"></div>
+        <div id="ourBooks"></div>
+        <section class="min-h-screen flex items-center py-16 animated-bg">
+            <div
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex lg:flex-row flex-col gap-20 overflow-hidden md:overflow-visible">
+                <div class="flex flex-1 gap-16 items-center">
+                    <div class="space-y-8 slide-in-left">
+                        <div class="inline-flex items-center px-4 py-2 bg-book-primary/10 rounded-full fade-in">
+                            <span class="w-2 h-2 bg-book-primary rounded-full mr-2"></span>
+                            <span class="text-book-primary font-medium text-sm">Available on Rokomari</span>
+                        </div>
+
+                        <div class="fade-in">
+                            <h1 class="heading-font text-4xl md:text-5xl lg:text-3xl font-bold text-book-secondary mb-4">
+                                ঝিনাইদহের মরমী কবি বলরাম শর্মা ও তাঁর কালজয়ী সাধন সংগীত(হার্ডকভার)
+                            </h1>
+                        </div>
+
+                        <div class="flex items-center space-x-4 fade-in">
+                            <div class="w-12 h-12 rounded-full bg-gray-200 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
+                                    alt="Author" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900">By Emran Hossain</p>
+                                <p class="text-gray-600 text-sm">CEO & Leadership Expert</p>
+                            </div>
+                        </div>
+
+                        <p class="text-lg text-gray-700 leading-relaxed fade-in text-justify">
+                            বলরাম শর্মা (১৯১১-১৯৮৯) কবি ও সাধক ছিলেন। ঝিনাইদহের কথা মনে এলেই মনে পড়ে পাঞ্জু শাহ কিংবা পাগলা
+                            কানাইয়ের নাম। কোনো কোনো গবেষক লালন সাঁইকেও ঝিনাইদহের জাতক প্রচার করলেও তিনি শেষতক কুষ্টিয়ারই
+                            সন্তান। ঝিনাইদহের হলে তিনি যশোরের অংশ হতেন। কিন্তু লালন তো নদিয়াভূমির তথা কুষ্টিয়ার। সে বিতর্কে
+                            গিয়ে লাভ নেই। ঝিনাইদহ তো কুষ্টিয়ারই সন্নিহিত অঞ্চল। তাই ঝিনাইদহবাসী লালনকে নিয়েও গর্ব করে যেমন
+                            ফরিদপুর কিংবা সিলেটের মানুষও লালনকে নিজের করে ভাবে। লালন এখন কালিক ও আঞ্চলিক সীমার ঊর্ধ্বে।
+                            ঝিনাইদহ অঞ্চল মরমিকবিদের জন্য ঊর্বর....
+                        </p>
+
+                        <div class="flex items-center space-x-4 fade-in">
+                            <div class="flex rating-stars">
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            </div>
+                            <span class="text-gray-600">4.9 (48 reviews)</span>
+                        </div>
+
+                        <div class="space-y-6 fade-in">
+                            <div class="flex items-center space-x-4">
+                                <div class="price-tag text-white font-bold text-3xl px-6 py-3 rounded-lg">
+                                    TK. 172
+                                </div>
+                                <div class="bg-book-accent text-book-secondary font-bold px-3 py-1 rounded-full text-sm">
+                                    Save 14%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-center slide-in-right flex-1">
+                    <div class="book-image-container relative">
+                        <div class="absolute -top-8 -right-8 w-32 h-32 bg-book-primary/10 rounded-full -z-10 floating-element"
+                            style="animation-delay: 0s;"></div>
+                        <div class="absolute -bottom-8 -left-8 w-24 h-24 bg-book-accent/20 rounded-full -z-10 floating-element"
+                            style="animation-delay: 1s;"></div>
+                        <div class="relative">
+                            <img src="images/book.jpg" alt="The Art of Leadership Book Cover"
+                                class="book-image lg:w-[700px] w-full max-w-md mx-auto object-cover">
+                            <div class="absolute -top-4 -right-4 bg-white rounded-full p-3 shadow-lg floating-element"
+                                style="animation-delay: 0.5s;">
+                                <i data-lucide="award" class="w-6 h-6 text-book-primary"></i>
+                            </div>
+                            <div class="absolute -bottom-4 -left-4 bg-white rounded-full p-3 shadow-lg floating-element"
+                                style="animation-delay: 1.5s;">
+                                <i data-lucide="heart" class="w-6 h-6 text-red-500"></i>
+                            </div>
+                        </div>
+                        <div class="absolute -top-6 bg-book-primary text-white font-bold px-4 py-2 rounded-full transform -rotate-12 floating-element"
+                            style="animation-delay: 2s;">
+                            E-book Available
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4 fade-in mt-5">
+                            <button
+                                onclick="window.location.href='https://www.rokomari.com/book/234320/jhinaidoher-mormi-kobi-boloram-sharma-o-tar-kaljoyee-sadhon-songit'"
+                                class="btn-primary text-white font-semibold px-8 py-4 rounded-lg text-lg flex items-center justify-center space-x-2 pulse-animation mx-auto">
+                                <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                                <span>Buy Now</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="riseAboveAll"></div>
+        <div id="hrServices"></div>
+        <section id="projects" class="relative z-10">
+            <div class="relative z-10 max-w-7xl mx-auto px-6 py-24">
+                <div class="flex flex-col items-center text-center mb-20 space-y-6">
+                    <div
+                        class="inline-flex items-center px-4 py-1.5 rounded-full border border-blue-200 bg-white/50 text-blue-600 text-xs font-bold tracking-wide uppercase backdrop-blur-md mb-4 shadow-sm animate-[fadeIn_1s_ease-out]">
+                        <span class="relative flex h-2 w-2 mr-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                        </span>
+                        Portfolio 2024
+                    </div>
+
+                    <h1 class="font-display text-5xl md:text-7xl font-bold tracking-tight text-slate-900 animate-[fadeIn_1s_ease-out_0.2s_both]">
+                        Ventures & <br class="hidden sm:block" />
+                        <span class="text-gradient-main">Initiatives</span>
+                    </h1>
+
+                    <p class="max-w-2xl text-lg text-slate-500 font-medium leading-relaxed animate-[fadeIn_1s_ease-out_0.4s_both]">
+                        Explorations in technology, education, and sustainable development.
+                        Building the future through <span class="text-slate-800 font-semibold decoration-blue-300 underline decoration-2 underline-offset-4">innovation</span>
+                        and <span class="text-slate-800 font-semibold decoration-emerald-300 underline decoration-2 underline-offset-4">community impact</span>.
+                    </p>
+                </div>
+
+                <div class="flex justify-center mb-16 animate-[fadeIn_1s_ease-out_0.6s_both]">
+                    <div id="filter-container"
+                        class="flex flex-wrap justify-center gap-2 p-2 bg-white/60 backdrop-blur-xl border border-white/50 rounded-full shadow-lg shadow-slate-200/50">
+                    </div>
+                </div>
+
+                <div id="ventures-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+                <div id="show-more-container" class="hidden justify-center mt-20 pb-10">
+                    <button id="show-all-btn"
+                        class="group relative px-8 py-4 bg-white text-slate-800 rounded-full overflow-hidden border border-slate-200 transition-all shadow-lg hover:shadow-xl hover:scale-105">
+                        <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-50 to-emerald-50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <span class="relative flex items-center gap-2 font-semibold">
+                            View Full Archive
+                            <i data-lucide="arrow-down" class="w-4 h-4 transition-transform group-hover:translate-y-1"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="contact"></div>
+    <footer class="relative bg-slate-900 text-slate-200 overflow-hidden pt-12 pb-6 rounded-t-3xl border-t border-slate-800 shadow-[0_-10px_40px_-15px_rgba(0,0,0,0.3)]">
+        <div class="absolute top-[-50%] left-[-10%] w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute bottom-[-20%] right-[-10%] w-[400px] h-[400px] bg-orange-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="mb-8 border-b border-white/10 pb-6 flex flex-col md:flex-row justify-between items-end">
+                <div class="self-start md:self-auto transform origin-left hover:scale-105 transition-transform duration-300">
+                    <div class="rounded-full flex flex-col items-center justify-center relative -top-2">
+                        <h1 class="text-orange-500 font-bold text-4xl md:text-6xl dancing-script-font block leading-none z-10 drop-shadow-lg">Emran</h1>
+                        <h1 class="dancing-script-font ml-3 md:ml-6 text-white font-bold text-4xl md:text-6xl -mt-3 md:-mt-6 p-0 leading-none opacity-95 drop-shadow-md">Hossain</h1>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2 mt-4 md:mt-0 bg-white/5 px-3 py-1.5 rounded-full border border-white/5 backdrop-blur-sm">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                    </span>
+                    <span class="text-slate-300 text-[10px] md:text-xs font-medium tracking-wide">OPEN TO WORK</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 mb-8">
+                <div class="lg:col-span-4 flex flex-col gap-4">
+                    <div
+                        class="group bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-2xl hover:bg-white/10 hover:border-orange-500/30 transition-all cursor-pointer relative overflow-hidden shadow-lg"
+                        onclick="copyEmail()">
+                        <div class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fas fa-copy text-slate-400 text-sm"></i>
+                        </div>
+                        <h3 class="text-slate-400 text-[10px] font-bold tracking-wider mb-1 uppercase">Get in touch</h3>
+                        <p class="text-lg md:text-xl font-display font-medium text-white group-hover:text-orange-400 transition-colors">info@emran.com</p>
+                        <p id="copyStatus" class="text-[10px] text-orange-400 mt-1 h-3 opacity-0 transition-opacity">Copied to clipboard!</p>
+                    </div>
+
+                    <div class="bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-2xl flex-grow flex flex-col justify-center shadow-lg">
+                        <div class="flex flex-wrap gap-3">
+                            <a href="#" class="h-10 w-10 rounded-full border border-white/20 text-slate-300 flex items-center justify-center hover:bg-white hover:text-black hover:border-white transition-all duration-300">
+                                <i class="fab fa-linkedin-in text-sm"></i>
+                            </a>
+                            <a href="#" class="h-10 w-10 rounded-full border border-white/20 text-slate-300 flex items-center justify-center hover:bg-white hover:text-black hover:border-white transition-all duration-300">
+                                <i class="fab fa-github text-sm"></i>
+                            </a>
+                            <a href="#" class="h-10 w-10 rounded-full border border-white/20 text-slate-300 flex items-center justify-center hover:bg-white hover:text-black hover:border-white transition-all duration-300">
+                                <i class="fab fa-dribbble text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 bg-white/5 backdrop-blur-md border border-white/10 p-5 rounded-2xl shadow-lg">
+                    <h3 class="text-slate-400 text-[10px] font-bold tracking-wider mb-4 uppercase">Message Me</h3>
+                    <form id="contactForm" class="space-y-3">
+                        <div class="grid grid-cols-2 gap-3">
+                            <input type="text" id="firstName" required placeholder="Name"
+                                class="w-full bg-slate-800/50 border border-white/10 text-sm text-white px-3 py-2 rounded focus:outline-none focus:border-orange-500/50 focus:bg-slate-800 transition-all placeholder-slate-500">
+                            <input type="text" id="subject" placeholder="Subject"
+                                class="w-full bg-slate-800/50 border border-white/10 text-sm text-white px-3 py-2 rounded focus:outline-none focus:border-orange-500/50 focus:bg-slate-800 transition-all placeholder-slate-500">
+                        </div>
+
+                        <input type="email" id="emailInput" required placeholder="Email"
+                            class="w-full bg-slate-800/50 border border-white/10 text-sm text-white px-3 py-2 rounded focus:outline-none focus:border-orange-500/50 focus:bg-slate-800 transition-all placeholder-slate-500">
+
+                        <textarea id="message" rows="2" placeholder="How can I help you?"
+                            class="w-full bg-slate-800/50 border border-white/10 text-sm text-white px-3 py-2 rounded focus:outline-none focus:border-orange-500/50 focus:bg-slate-800 transition-all placeholder-slate-500 resize-none"></textarea>
+
+                        <div class="pt-1 flex justify-end">
+                            <button type="submit"
+                                class="bg-slate-200 text-slate-900 px-6 py-2 rounded-full text-xs font-bold hover:bg-orange-500 hover:text-white transition-colors duration-300 flex items-center gap-2 shadow-md">
+                                Send
+                                <i class="fas fa-arrow-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="lg:col-span-3 h-full min-h-[150px]">
+                    <div class="h-full bg-white border border-white/10 rounded-2xl overflow-hidden relative group shadow-lg">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093747!2d144.9537353153166!3d-37.816279742021665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d6a32f7f1f84!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1625063462994!5m2!1sen!2sus"
+                            class="w-full h-full border-0" allowfullscreen="" loading="lazy">
+                        </iframe>
+                        <div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur text-black px-3 py-1 rounded-md text-[10px] font-mono border border-gray-200 shadow-sm">
+                            <i class="fas fa-location-dot text-orange-500 mr-1"></i> DHAKA, BD
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center border-t border-white/10 pt-4 text-[10px] md:text-xs text-slate-400 font-medium">
+                <div>
+                    © <span id="year"></span> EMRAN HOSSAIN
+                </div>
+                <div class="flex gap-4 mt-2 md:mt-0">
+                    <a href="#" class="link-hover-effect hover:text-white transition-colors" data-text="PRIVACY"><span>PRIVACY</span></a>
+                    <a href="#" class="link-hover-effect hover:text-white transition-colors" data-text="TERMS"><span>TERMS</span></a>
+                </div>
+                <div class="mt-2 md:mt-0 hidden md:block opacity-60" id="localTime"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

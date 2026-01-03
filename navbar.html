@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .dancing-script-font {
+            font-family: "Dancing Script", cursive;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'orange': {
+                            600: '#EA580C',
+                            700: '#C2410C',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<bod>
+    <header>
+        <!-- Fixed Logo on Left -->
+        <div class="flex md:justify-around md:p-5 p-3  md:w-4/5 mx-auto ">
+            <div class="z-25 flex-1">
+                <div class="flex items-center">
+                    <div class=" rounded-full flex flex-col items-center justify-center relative -top-3">
+                        <h1 class="text-orange-600 font-bold text-3xl dancing-script-font block ">Emran</h1> <br>
+                        <h1 class="dancing-script-font ml-3 text-black font-bold text-3xl -m-8 p-0">Hossain</h1>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Menu Toggle Button - Fixed on right side -->
+            <button id="menu-toggle"
+                class=" text-white text-xl flex items-center justify-center z-52 bg-orange-600 px-4 py-2 rounded-3xl hover:bg-orange-700 transition-colors duration-200 ">
+                MENU
+            </button>
+
+
+        </div>
+
+        <!-- Right Side Navigation Panel -->
+        <div id="navbar"
+            class="fixed top-0 right-0 h-full w-[280px] bg-orange-600 shadow-lg z-40 transform transition-transform duration-500 ease-in-out translate-x-full">
+
+            <!-- Header with Logo and Close Button -->
+            <div class="flex justify-between items-center p-6 border-b border-orange-500/30">
+
+                <button id="close-btn"
+                    class="text-white hover:text-orange-200 transition-colors duration-200 p-2 rounded-md hover:bg-orange-700/50 z-50"
+                    aria-label="Close menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m18 6-12 12"></path>
+                        <path d="m6 6 12 12"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="px-6 py-8">
+                <ul class="space-y-4">
+                    <li>
+                        <a href="#home"
+                            class="nav-link block text-white hover:text-orange-200 hover:bg-orange-700/50 px-4 py-3 rounded-md text-lg font-medium transition-all duration-200 border-l-4 border-transparent hover:border-orange-200">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about"
+                            class="nav-link block text-white hover:text-orange-200 hover:bg-orange-700/50 px-4 py-3 rounded-md text-lg font-medium transition-all duration-200 border-l-4 border-transparent hover:border-orange-200">
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#training"
+                            class="nav-link block text-white hover:text-orange-200 hover:bg-orange-700/50 px-4 py-3 rounded-md text-lg font-medium transition-all duration-200 border-l-4 border-transparent hover:border-orange-200">
+                            Training
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#riseAboveAll"
+                            class="nav-link block text-white hover:text-orange-200 hover:bg-orange-700/50 px-4 py-3 rounded-md text-lg font-medium transition-all duration-200 border-l-4 border-transparent hover:border-orange-200">
+                            Rise Above All
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#teenageAcademy"
+                            class="nav-link block text-white hover:text-orange-200 hover:bg-orange-700/50 px-4 py-3 rounded-md text-lg font-medium transition-all duration-200 border-l-4 border-transparent hover:border-orange-200">
+                            Teenage Academy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#hrServices"
+                            class="nav-link block text-white hover:text-orange-200 hover:bg-orange-700/50 px-4 py-3 rounded-md text-lg font-medium transition-all duration-200 border-l-4 border-transparent hover:border-orange-200">
+                            HR Services
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#merchandise"
+                            class="nav-link block text-white hover:text-orange-200 hover:bg-orange-700/50 px-4 py-3 rounded-md text-lg font-medium transition-all duration-200 border-l-4 border-transparent hover:border-orange-200">
+                            Merchandise
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#ourBooks"
+                            class="nav-link block text-white hover:text-orange-200 hover:bg-orange-700/50 px-4 py-3 rounded-md text-lg font-medium transition-all duration-200 border-l-4 border-transparent hover:border-orange-200">
+                            Our Books
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact"
+                            class="nav-link block text-white hover:text-orange-200 hover:bg-orange-700/50 px-4 py-3 rounded-md text-lg font-medium transition-all duration-200 border-l-4 border-transparent hover:border-orange-200">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Social Links at Bottom -->
+            <div class="absolute bottom-8 left-0 w-full px-6">
+                <div class="border-t border-orange-500/30 pt-6">
+                    <h3 class="text-white font-semibold text-sm mb-4 text-center">Follow Us</h3>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#"
+                            class="text-white hover:text-orange-200 transition-colors duration-200 p-2 rounded-full hover:bg-orange-700/50"
+                            aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="text-white hover:text-orange-200 transition-colors duration-200 p-2 rounded-full hover:bg-orange-700/50"
+                            aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m16 8 6-6M22 2l-7 7-3-3"></path>
+                                <path d="M16 2h6v6"></path>
+                                <path d="M22 22H2V2h20z"></path>
+                                <path d="M7 17v-5"></path>
+                                <path d="M12 17v-5"></path>
+                                <path d="M17 17v-3a2 2 0 0 0-2-2 2 2 0 0 0-2 2v3"></path>
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="text-white hover:text-orange-200 transition-colors duration-200 p-2 rounded-full hover:bg-orange-700/50"
+                            aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="text-white hover:text-orange-200 transition-colors duration-200 p-2 rounded-full hover:bg-orange-700/50"
+                            aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17">
+                                </path>
+                                <path d="m10 15 5-3-5-3z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Overlay for mobile menu -->
+        <div id="overlay"
+            class="fixed inset-0 bg-black/50 z-30 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+    </header>
+
+
+    <script>
+        let isMenuOpen = false;
+
+        const menuToggle = document.getElementById('menu-toggle');
+        const navbar = document.getElementById('navbar');
+        const overlay = document.getElementById('overlay');
+        const closeBtn = document.getElementById('close-btn');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+
+            if (isMenuOpen) {
+                // Open menu
+                navbar.classList.remove('translate-x-full');
+                overlay.classList.remove('opacity-0', 'pointer-events-none');
+                overlay.classList.add('opacity-100');
+                menuToggle.textContent = 'CLOSE';
+                document.body.style.overflow = 'hidden';
+            } else {
+                // Close menu
+                navbar.classList.add('translate-x-full');
+                overlay.classList.remove('opacity-100');
+                overlay.classList.add('opacity-0', 'pointer-events-none');
+                menuToggle.textContent = 'MENU';
+                document.body.style.overflow = '';
+            }
+        }
+
+        function closeMenu() {
+            if (isMenuOpen) {
+                toggleMenu();
+            }
+        }
+
+        // Event listeners
+        menuToggle.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu);
+
+        // Close menu when clicking on navigation links
+        navLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        // Handle scroll effect for logo visibility
+        let isScrolled = false;
+
+        function handleScroll() {
+            const scrolled = window.scrollY > 20;
+            if (scrolled !== isScrolled) {
+                isScrolled = scrolled;
+                // You can add scroll effects here if needed
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+    </body>
+
+</html>

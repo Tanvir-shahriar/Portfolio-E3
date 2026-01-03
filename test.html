@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional About Me | Digital Architect</title>
+    <meta name="description" content="Creating high-impact experiences at the intersection of technology and innovation.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        :root {
+            --primary-color: #1d4ed8; /* Deep Blue */
+            --secondary-color: #4b5563; /* Gray */
+            --accent-color: #10b981; /* Green */
+            --background-color: #f8fafc; /* Light Background */
+        }
+
+        body {
+            background-color: var(--background-color);
+            font-family: 'Inter', system-ui, sans-serif;
+            overflow: hidden; /* Prevent scrollbars from showing during animation */
+        }
+
+        /* Animations */
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes typewriter {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Particle animation */
+        @keyframes moveParticles {
+            0% { transform: translateX(0) translateY(0); }
+            100% { transform: translateX(100px) translateY(100px); }
+        }
+
+        /* Utility Classes */
+        .animate-fade-in { animation: fade-in 1s ease-out forwards; }
+        .animate-typewriter { animation: typewriter 3s steps(40, end) forwards; }
+        .animate-blink { animation: blink 1s infinite; }
+        .animate-pulse { animation: pulse 1s ease-in-out infinite; }
+        .animate-moveParticles { animation: moveParticles 20s linear infinite; }
+
+        .gradient-background {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+        }
+
+        .card-glow {
+            background: rgba(250, 250, 254, 0.7);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.1);
+        }
+
+        .typewriter-container {
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+        }
+
+        .typewriter-text {
+            display: inline-block;
+            overflow: hidden;
+            white-space: normal;
+            max-width: 100%;
+        }
+
+        .tag {
+            transition: all 0.3s ease;
+        }
+
+        .tag:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Background particles */
+        .background-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.1);
+            opacity: 0.3;
+            animation: moveParticles 20s infinite;
+        }
+
+        .circle { border-radius: 50%; }
+        .square { border-radius: 0%; }
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 35px solid rgba(0, 0, 0, 0.1);
+        }
+
+        /* Custom sizes and colors */
+        .particle1 { width: 30px; height: 30px; background-color: rgba(0, 123, 255, 0.3); }
+        .particle2 { width: 40px; height: 40px; background-color: rgba(40, 167, 69, 0.3); }
+        .particle3 { width: 50px; height: 50px; background-color: rgba(255, 193, 7, 0.3); }
+        .particle4 { width: 25px; height: 25px; background-color: rgba(255, 0, 0, 0.3); }
+        .particle5 { width: 35px; height: 35px; background-color: rgba(0, 255, 255, 0.3); }
+        .particle6 { width: 45px; height: 45px; background-color: rgba(255, 105, 180, 0.3); }
+
+    </style>
+</head>
+<body>
+    <section>
+
+    
+    <!-- Background Animation (Particles) -->
+    <div class="background-animation">
+        <!-- Particles -->
+        <div class="particle particle1 circle" style="left: 10%; top: 15%; animation-delay: 0s;"></div>
+        <div class="particle particle2 square" style="left: 30%; top: 50%; animation-delay: 2s;"></div>
+        <div class="particle particle3 triangle" style="left: 50%; top: 30%; animation-delay: 4s;"></div>
+        <div class="particle particle4 circle" style="left: 70%; top: 70%; animation-delay: 6s;"></div>
+        <div class="particle particle5 square" style="left: 80%; top: 40%; animation-delay: 8s;"></div>
+        <div class="particle particle6 triangle" style="left: 90%; top: 20%; animation-delay: 10s;"></div>
+        <div class="particle particle1 circle" style="left: 10%; top: 15%; animation-delay: 0s;"></div>
+        <div class="particle particle2 square" style="left: 30%; top: 50%; animation-delay: 2s;"></div>
+        <div class="particle particle3 triangle" style="left: 50%; top: 30%; animation-delay: 4s;"></div>
+        <div class="particle particle4 circle" style="left: 70%; top: 70%; animation-delay: 6s;"></div>
+        <div class="particle particle5 square" style="left: 80%; top: 40%; animation-delay: 8s;"></div>
+        <div class="particle particle6 triangle" style="left: 90%; top: 20%; animation-delay: 10s;"></div>
+        <div class="particle particle1 circle" style="left: 10%; top: 15%; animation-delay: 0s;"></div>
+        <div class="particle particle2 square" style="left: 30%; top: 50%; animation-delay: 2s;"></div>
+        <div class="particle particle3 triangle" style="left: 50%; top: 30%; animation-delay: 4s;"></div>
+        <div class="particle particle4 circle" style="left: 70%; top: 70%; animation-delay: 6s;"></div>
+        <div class="particle particle5 square" style="left: 80%; top: 40%; animation-delay: 8s;"></div>
+        <div class="particle particle6 triangle" style="left: 90%; top: 20%; animation-delay: 10s;"></div>
+        
+        <!-- More particles can be added if desired -->
+    </div>
+
+    <!-- Main Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Main Card -->
+        <div id="main-card" class="relative z-10 max-w-4xl mx-auto p-8 opacity-0 scale-95 transition-all duration-1000 animate-fade-in">
+            <!-- Holographic Card Border -->
+            <div class="relative group">
+                <!-- Card Content -->
+                <div class="relative card-glow rounded-2xl p-12 border border-gray-300/40 overflow-hidden">
+                    <!-- Title -->
+                    <div class="relative mb-8">
+                        <h1 class="text-5xl font-semibold text-primary mb-2">
+                            ABOUT ME
+                        </h1>
+                        <div class="h-1 w-32 bg-primary rounded-full"></div>
+                    </div>
+
+                    <!-- Bio Text with Typewriter Effect -->
+                    <div class="relative">
+                        <p id="bio-text" class="text-xl leading-relaxed text-secondary font-mono opacity-0 transition-opacity duration-500">
+                            <span class="typewriter-container">
+                                <span id="typewriter" class="typewriter-text animate-typewriter">
+                                    I'm a digital architect crafting experiences at the intersection of technology and innovation. Specializing in high-performance computing and system architecture, I create solutions that drive business growth and improve user experience.
+                                </span>
+                            </span>
+                        </p>
+                    </div>
+
+                    <!-- Tags -->
+                    <div class="mt-8 flex gap-4 flex-wrap">
+                        <div class="tag group">
+                            <span class="inline-block px-4 py-2 bg-blue-100 border border-blue-500/40 rounded-lg text-blue-600 font-mono text-sm">
+                                &lt;innovator/&gt;
+                            </span>
+                        </div>
+                        <div class="tag group">
+                            <span class="inline-block px-4 py-2 bg-green-100 border border-green-500/40 rounded-lg text-green-600 font-mono text-sm">
+                                architect.digital
+                            </span>
+                        </div>
+                        <div class="tag group">
+                            <span class="inline-block px-4 py-2 bg-gray-100 border border-gray-500/40 rounded-lg text-gray-600 font-mono text-sm">
+                                tech.builder
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Status Indicator -->
+                    <div class="absolute top-4 right-4 flex items-center gap-2">
+                        <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                        <span class="text-xs font-mono text-green-600 uppercase tracking-wider">Online</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+
+    <script>
+        // Card and text animations
+        window.addEventListener('load', () => {
+            // Start typewriter effect
+            setTimeout(() => {
+                const bioText = document.getElementById('bio-text');
+                const typewriter = document.getElementById('typewriter');
+                bioText.style.opacity = '1';
+                typewriter.classList.add('animate-typewriter');
+            }, 500);
+        });
+    </script>
+</body>
+</html>

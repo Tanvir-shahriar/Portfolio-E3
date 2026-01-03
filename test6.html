@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventures & Initiatives</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    animation: {
+                        'blob': 'blob 10s infinite',
+                        'fade-in': 'fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            background-color: #f8fafc; /* Slate 50 */
+            color: #1e293b; /* Slate 800 */
+            overflow-x: hidden;
+        }
+
+        /* Subtle Noise Overlay */
+        .noise-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* Light Mode Spotlight */
+        .card-spotlight {
+            background: radial-gradient(
+                800px circle at var(--mouse-x) var(--mouse-y),
+                rgba(255, 255, 255, 0.9),
+                transparent 40%
+            );
+            z-index: 1;
+        }
+
+        /* Glass Card Styles */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+        }
+
+        .grid-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .grid-item.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Gradient Text Utilities */
+        .text-gradient-main {
+            background: linear-gradient(135deg, #2563eb 0%, #059669 50%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-blue-100 selection:text-blue-900">
+
+    <div class="noise-overlay"></div>
+
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-slate-50">
+        <div class="absolute top-[-20%] left-[-10%] w-[800px] h-[800px] bg-blue-200/40 rounded-full mix-blend-multiply filter blur-[100px] opacity-70 animate-blob"></div>
+        <div class="absolute top-[-10%] right-[-20%] w-[700px] h-[700px] bg-purple-200/40 rounded-full mix-blend-multiply filter blur-[100px] opacity-70 animate-blob animation-delay-2000"></div>
+        <div class="absolute bottom-[-20%] left-[20%] w-[800px] h-[800px] bg-emerald-100/60 rounded-full mix-blend-multiply filter blur-[100px] opacity-70 animate-blob animation-delay-4000"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 py-24">
+        
+        <div class="flex flex-col items-center text-center mb-20 space-y-6">
+            <div class="inline-flex items-center px-4 py-1.5 rounded-full border border-blue-200 bg-white/50 text-blue-600 text-xs font-bold tracking-wide uppercase backdrop-blur-md mb-4 shadow-sm animate-[fadeIn_1s_ease-out]">
+                <span class="relative flex h-2 w-2 mr-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                </span>
+                Portfolio 2024
+            </div>
+
+            <h1 class="font-display text-5xl md:text-7xl font-bold tracking-tight text-slate-900 animate-[fadeIn_1s_ease-out_0.2s_both]">
+                Ventures & <br class="hidden sm:block" />
+                <span class="text-gradient-main">Initiatives</span>
+            </h1>
+            
+            <p class="max-w-2xl text-lg text-slate-500 font-medium leading-relaxed animate-[fadeIn_1s_ease-out_0.4s_both]">
+                Explorations in technology, education, and sustainable development. 
+                Building the future through <span class="text-slate-800 font-semibold decoration-blue-300 underline decoration-2 underline-offset-4">innovation</span> and <span class="text-slate-800 font-semibold decoration-emerald-300 underline decoration-2 underline-offset-4">community impact</span>.
+            </p>
+        </div>
+
+        <div class="flex justify-center mb-16 animate-[fadeIn_1s_ease-out_0.6s_both]">
+            <div id="filter-container" class="flex flex-wrap justify-center gap-2 p-2 bg-white/60 backdrop-blur-xl border border-white/50 rounded-full shadow-lg shadow-slate-200/50">
+                </div>
+        </div>
+
+        <div id="ventures-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            </div>
+
+        <div id="show-more-container" class="hidden justify-center mt-20 pb-10">
+            <button id="show-all-btn" class="group relative px-8 py-4 bg-white text-slate-800 rounded-full overflow-hidden border border-slate-200 transition-all shadow-lg hover:shadow-xl hover:scale-105">
+                <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-50 to-emerald-50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <span class="relative flex items-center gap-2 font-semibold">
+                    View Full Archive
+                    <i data-lucide="arrow-down" class="w-4 h-4 transition-transform group-hover:translate-y-1"></i>
+                </span>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // --- Data ---
+        const ventures = [
+            { id: 1, name: 'Suborno IT', description: 'Tech solutions, digital transformation, accessibility, and innovation.', category: 'Tech' },
+            { id: 2, name: 'Suborno Disability Initiative', description: 'Empowering individuals with disabilities through tech and inclusive services.', category: 'Tech' },
+            { id: 3, name: 'Udvabon Science & Technology Club', description: 'Promoting STEM education and skills among youth.', category: 'Tech' },
+            { id: 4, name: 'Green Life International School', description: 'Sustainable education with a focus on environmental awareness.', category: 'Education' },
+            { id: 5, name: 'Kids Wave', description: 'Educational programs for underprivileged children.', category: 'Education' },
+            { id: 6, name: 'Md. Emran Hossain Public Library', description: 'Promoting literacy and education in local communities.', category: 'Education' },
+            { id: 7, name: "Jhenaidah Writers' Club", description: 'Supporting local writers and creative writing.', category: 'Education' },
+            { id: 8, name: 'Jhenaidah Publications', description: 'Publishing literary works and preserving cultural heritage.', category: 'Education' },
+            { id: 9, name: 'Emran Industries Limited', description: 'Industrial production, sustainability, and manufacturing innovation.', category: 'Agro' },
+            { id: 10, name: 'Emran Dairy Farm', description: 'Sustainable dairy production and healthy products.', category: 'Agro' },
+            { id: 11, name: 'Soptosongho Jubo Poribar', description: 'Empowering youth and families through community development.', category: 'Social' },
+            { id: 12, name: 'Next Wave', description: 'Inspiring and educating the next generation of leaders.', category: 'Social' },
+        ];
+
+        const categories = ['All', 'Tech', 'Education', 'Agro', 'Social'];
+        
+        // Configuration
+        const categoryConfig = {
+            'Tech': { icon: 'cpu', color: 'text-blue-600', bg: 'bg-blue-50', border: 'border-blue-100' },
+            'Education': { icon: 'book-open', color: 'text-purple-600', bg: 'bg-purple-50', border: 'border-purple-100' },
+            'Agro': { icon: 'sprout', color: 'text-emerald-600', bg: 'bg-emerald-50', border: 'border-emerald-100' },
+            'Social': { icon: 'heart', color: 'text-rose-600', bg: 'bg-rose-50', border: 'border-rose-100' },
+            'All': { icon: 'layers', color: 'text-slate-600', bg: 'bg-slate-100', border: 'border-slate-200' }
+        };
+
+        // --- State ---
+        let activeCategory = 'All';
+        let showAll = false;
+        
+        // Function to determine visible count based on screen width
+        function getVisibleCount() {
+            // Tailwind 'md' is 768px
+            return window.innerWidth >= 768 ? 6 : 3;
+        }
+
+        // --- DOM Elements ---
+        const filterContainer = document.getElementById('filter-container');
+        const gridContainer = document.getElementById('ventures-grid');
+        const showMoreContainer = document.getElementById('show-more-container');
+        const showAllBtn = document.getElementById('show-all-btn');
+
+        // --- Functions ---
+
+        function renderButtons() {
+            filterContainer.innerHTML = categories.map(cat => {
+                const isActive = activeCategory === cat;
+                const activeClasses = 'bg-slate-800 text-white shadow-lg shadow-slate-300/50 scale-105';
+                const inactiveClasses = 'text-slate-500 hover:text-slate-800 hover:bg-white/80';
+                
+                return `
+                    <button 
+                        onclick="setCategory('${cat}')"
+                        class="px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${isActive ? activeClasses : inactiveClasses}"
+                    >
+                        ${cat}
+                    </button>
+                `;
+            }).join('');
+        }
+
+        function renderGrid() {
+            const filtered = activeCategory === 'All' 
+                ? ventures 
+                : ventures.filter(v => v.category === activeCategory);
+            
+            // Determine limit based on state and screen size
+            const currentLimit = showAll ? filtered.length : getVisibleCount();
+            
+            const displayed = filtered.slice(0, currentLimit);
+
+            gridContainer.innerHTML = displayed.map((venture, index) => {
+                const config = categoryConfig[venture.category];
+                
+                return `
+                    <div class="grid-item group relative h-full glass-card rounded-3xl overflow-hidden hover:shadow-2xl hover:shadow-blue-200/40 transition-all duration-500"
+                         onmousemove="handleMouseMove(event, this)">
+                        
+                        <div class="card-spotlight absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+
+                        <div class="relative z-10 p-8 flex flex-col h-full">
+                            <div class="flex justify-between items-start mb-6">
+                                <div class="p-3 rounded-2xl ${config.bg} ${config.border} border shadow-inner">
+                                    <i data-lucide="${config.icon}" class="w-6 h-6 ${config.color}"></i>
+                                </div>
+                                <span class="text-xs font-bold font-mono text-slate-400 bg-white/80 px-2 py-1 rounded border border-slate-100">
+                                    0${venture.id}
+                                </span>
+                            </div>
+
+                            <h3 class="font-display text-2xl font-bold text-slate-800 mb-3 group-hover:text-blue-600 transition-colors">
+                                ${venture.name}
+                            </h3>
+
+                            <p class="text-slate-500 leading-relaxed text-sm flex-grow font-medium">
+                                ${venture.description}
+                            </p>
+
+                            <div class="mt-6 pt-6 border-t border-slate-100 flex items-center text-xs font-bold text-slate-400 uppercase tracking-wider group-hover:text-slate-600 transition-colors">
+                                ${venture.category}
+                                <div class="ml-auto overflow-hidden w-5 h-5 relative">
+                                     <i data-lucide="arrow-up-right" class="w-5 h-5 absolute inset-0 text-slate-800 translate-y-full -translate-x-full group-hover:translate-y-0 group-hover:translate-x-0 transition-transform duration-300"></i>
+                                     <i data-lucide="arrow-right" class="w-5 h-5 absolute inset-0 text-slate-300 group-hover:translate-x-full group-hover:-translate-y-full transition-transform duration-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            lucide.createIcons();
+
+            // Staggered Entry Animation
+            const items = document.querySelectorAll('.grid-item');
+            items.forEach((item, i) => {
+                setTimeout(() => {
+                    item.classList.add('show');
+                }, i * 70);
+            });
+
+            // Show More Logic
+            // If filtered list is larger than the current view limit, and we aren't showing all yet
+            if (filtered.length > getVisibleCount() && !showAll) {
+                showMoreContainer.classList.remove('hidden');
+                showMoreContainer.classList.add('flex');
+            } else {
+                showMoreContainer.classList.add('hidden');
+                showMoreContainer.classList.remove('flex');
+            }
+        }
+
+        // --- Spotlight Effect Logic ---
+        function handleMouseMove(e, card) {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
+        }
+
+        // --- Event Handlers ---
+        window.setCategory = (category) => {
+            if (activeCategory === category) return;
+            activeCategory = category;
+            showAll = false;
+            renderButtons();
+            
+            const items = document.querySelectorAll('.grid-item');
+            items.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(10px)';
+            });
+            
+            setTimeout(renderGrid, 300);
+        };
+
+        showAllBtn.addEventListener('click', () => {
+            showAll = true;
+            renderGrid();
+        });
+
+        // Handle Responsive Resizing
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                if (!showAll) {
+                    renderGrid(); // Re-render to update the visible count
+                }
+            }, 100);
+        });
+
+        // --- Init ---
+        document.addEventListener('DOMContentLoaded', () => {
+            renderButtons();
+            renderGrid();
+        });
+
+    </script>
+</body>
+</html>

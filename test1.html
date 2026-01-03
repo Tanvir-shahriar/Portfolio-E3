@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Chen - Business Entrepreneur & Innovator</title>
+    <meta name="description"
+        content="Business entrepreneur and innovator transforming visionary ideas into successful ventures. Expertise in strategic innovation, sustainable growth, and meaningful impact.">
+    <meta name="author" content="Alex Chen">
+    <meta name="keywords"
+        content="entrepreneur, business innovation, venture capital, startup accelerator, sustainable technology">
+
+    <meta property="og:title" content="Alex Chen - Business Entrepreneur & Innovator">
+    <meta property="og:description"
+        content="Transforming visionary ideas into successful ventures through strategic innovation and sustainable growth.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            DEFAULT: 'hsl(0, 72%, 51%)',
+                            foreground: 'hsl(0, 0%, 98%)',
+                            glow: 'hsl(0, 72%, 61%)'
+                        },
+                        accent: {
+                            DEFAULT: 'hsl(348, 83%, 47%)',
+                            foreground: 'hsl(0, 0%, 98%)',
+                            glow: 'hsl(348, 83%, 57%)'
+                        },
+                        card: {
+                            DEFAULT: 'hsl(0, 0%, 100%)',
+                            foreground: 'hsl(0, 0%, 8%)'
+                        },
+                        muted: {
+                            DEFAULT: 'hsl(0, 0%, 95%)',
+                            foreground: 'hsl(0, 0%, 45%)'
+                        },
+                        border: 'hsl(0, 0%, 90%)',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'fade-in-left': 'fadeInLeft 1s ease-out 0.2s both',
+                        'fade-in-right': 'fadeInRight 1s ease-out 0.4s both',
+                        'pulse-glow': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            'from': {
+                                opacity: '0',
+                                transform: 'translateY(30px)'
+                            },
+                            'to': {
+                                opacity: '1',
+                                transform: 'translateY(0)'
+                            }
+                        },
+                        fadeInLeft: {
+                            'from': {
+                                opacity: '0',
+                                transform: 'translateX(-30px)'
+                            },
+                            'to': {
+                                opacity: '1',
+                                transform: 'translateX(0)'
+                            }
+                        },
+                        fadeInRight: {
+                            'from': {
+                                opacity: '0',
+                                transform: 'translateX(30px)'
+                            },
+                            'to': {
+                                opacity: '1',
+                                transform: 'translateX(0)'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --primary-color: #1d4ed8; /* Deep Blue */
+            --secondary-color: #4b5563; /* Gray */
+            --accent-color: #10b981; /* Green */
+            --background-color: #f8fafc; /* Light Background */
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(135deg, hsl(0, 0%, 98%) 0%, hsl(0, 0%, 96%) 50%, hsl(0, 0%, 98%) 100%);
+            background-attachment: fixed;
+        }
+
+        .hero-section {
+            /* Ensuring the hero section is always 100vh in height */
+            min-height: 100vh;
+            /* Ensures the hero section takes full viewport height */
+            padding-bottom: 80px;
+            /* Add space below the hero section */
+        }
+
+        .projects-section {
+            margin-top: 100px;
+            /* Add some margin to the top of the project section */
+            padding-top: 80px;
+            /* Smoothen the transition between the sections */
+        }
+
+
+        .btn-hero-primary {
+            background: hsl(0, 72%, 51%);
+            color: hsl(0, 0%, 98%);
+            border: 1px solid hsl(0, 72%, 51%, 0.2);
+            box-shadow: 0 4px 20px hsl(0, 72%, 51%, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-hero-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px hsl(0, 72%, 51%, 0.25);
+        }
+
+        .btn-hero-secondary {
+            background: hsl(0, 0%, 100%);
+            color: hsl(0, 0%, 8%);
+            border: 1px solid hsl(0, 0%, 90%);
+            box-shadow: 0 4px 20px hsl(0, 0%, 0%, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-hero-secondary:hover {
+            transform: scale(1.05);
+            background: hsl(0, 0%, 100%);
+        }
+
+        .social-icon {
+            transition: all 0.3s ease;
+            filter: drop-shadow(0 0 8px transparent);
+        }
+
+        .social-icon:hover {
+            transform: scale(1.1);
+            color: hsl(0, 72%, 51%);
+            filter: drop-shadow(0 0 8px hsl(0, 72%, 51%, 0.3));
+        }
+
+        .professional-card {
+            background: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(0, 0%, 99%) 100%);
+            border: 1px solid hsl(0, 0%, 90%);
+            box-shadow: 0 8px 32px hsl(0, 0%, 0%, 0.08);
+            transition: all 0.5s ease;
+        }
+
+        .professional-card:hover {
+            box-shadow: 0 20px 60px -12px hsl(0, 0%, 0%, 0.1);
+            border-color: hsl(0, 72%, 51%, 0.2);
+        }
+
+        .project-card {
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover .project-arrow {
+            color: hsl(0, 72%, 51%);
+            transform: rotate(45deg);
+        }
+
+        .project-card:hover .project-title {
+            color: hsl(0, 72%, 51%);
+        }
+
+        .text-hero {
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .text-subtitle {
+            font-size: clamp(1.25rem, 4vw, 1.5rem);
+            font-weight: 600;
+        }
+
+        .text-tagline {
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .text-hero {
+                font-size: 3rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes typewriter {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Particle animation */
+        @keyframes moveParticles {
+            0% { transform: translateX(0) translateY(0); }
+            100% { transform: translateX(100px) translateY(100px); }
+        }
+
+        /* Utility Classes */
+        .animate-fade-in { animation: fade-in 1s ease-out forwards; }
+        .animate-typewriter { animation: typewriter 3s steps(40, end) forwards; }
+        .animate-blink { animation: blink 1s infinite; }
+        .animate-pulse { animation: pulse 1s ease-in-out infinite; }
+        .animate-moveParticles { animation: moveParticles 20s linear infinite; }
+
+        .gradient-background {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+        }
+
+        .card-glow {
+            background: rgba(250, 250, 254, 0.7);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.1);
+        }
+
+        .typewriter-container {
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+        }
+
+        .typewriter-text {
+            display: inline-block;
+            overflow: hidden;
+            white-space: normal;
+            max-width: 100%;
+        }
+
+        .tag {
+            transition: all 0.3s ease;
+        }
+
+        .tag:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Background particles */
+        .background-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.1);
+            opacity: 0.3;
+            animation: moveParticles 20s infinite;
+        }
+
+        .circle { border-radius: 50%; }
+        .square { border-radius: 0%; }
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 35px solid rgba(0, 0, 0, 0.1);
+        }
+
+        /* Custom sizes and colors */
+        .particle1 { width: 30px; height: 30px; background-color: rgba(0, 123, 255, 0.3); }
+        .particle2 { width: 40px; height: 40px; background-color: rgba(40, 167, 69, 0.3); }
+        .particle3 { width: 50px; height: 50px; background-color: rgba(255, 193, 7, 0.3); }
+        .particle4 { width: 25px; height: 25px; background-color: rgba(255, 0, 0, 0.3); }
+        .particle5 { width: 35px; height: 35px; background-color: rgba(0, 255, 255, 0.3); }
+        .particle6 { width: 45px; height: 45px; background-color: rgba(255, 105, 180, 0.3); }
+    </style>
+</head>
+
+<body class="font-inter antialiased text-gray-900">
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center px-6 py-20 hero-section">
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Content Section -->
+                <div class="space-y-8 animate-fade-in-left">
+                    <!-- Name & Title -->
+                    <div class="space-y-6">
+                        <!-- Name with gradient -->
+                        <div class="space-y-4">
+                            <!-- Name with gradient -->
+                            <h1 class="text-hero bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-extrabold">
+                                Emran Hossain
+                            </h1>
+                            <!-- Subtitle with font weight and color -->
+                            <h2 class="text-subtitle text-primary font-semibold text-lg">
+                                Founder, Chairman and Chief Executive Officer
+                            </h2>
+                        </div>
+
+                        <!-- Tagline -->
+                        <p class="text-tagline text-muted-foreground leading-relaxed max-w-2xl mx-auto font-medium text-lg">
+                            Working for People, Dreaming for Society
+                        </p>
+                        <!-- Short Introduction -->
+                        <p class="text-tagline text-muted-foreground leading-relaxed max-w-2xl mx-auto font-medium text-lg mt-4">
+                            I’m Emran, a social entrepreneur working in women’s empowerment and child education.
+                        </p>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <button class="btn-hero-primary px-8 py-4 rounded-xl font-semibold flex items-center justify-center group">
+                            <i data-lucide="download" class="w-5 h-5 mr-2 group-hover:animate-bounce"></i>
+                            Download CV
+                        </button>
+
+                        <button class="btn-hero-secondary px-8 py-4 rounded-xl font-semibold flex items-center justify-center group" onclick="scrollToProjects()">
+                            <i data-lucide="external-link" class="w-5 h-5 mr-2 group-hover:rotate-45 transition-transform duration-300"></i>
+                            View Projects
+                        </button>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex space-x-6 pt-8">
+                        <a href="https://linkedin.com/in/alexchen" target="_blank" rel="noopener noreferrer" class="social-icon text-muted-foreground" aria-label="LinkedIn Profile">
+                            <i data-lucide="linkedin" class="w-6 h-6"></i>
+                        </a>
+
+                        <a href="https://twitter.com/alexchen" target="_blank" rel="noopener noreferrer" class="social-icon text-muted-foreground" aria-label="Twitter Profile">
+                            <i data-lucide="twitter" class="w-6 h-6"></i>
+                        </a>
+
+                        <a href="https://github.com/alexchen" target="_blank" rel="noopener noreferrer" class="social-icon text-muted-foreground" aria-label="GitHub Profile">
+                            <i data-lucide="github" class="w-6 h-6"></i>
+                        </a>
+
+                        <a href="mailto:alex@example.com" class="social-icon text-muted-foreground" aria-label="Email Contact">
+                            <i data-lucide="mail" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Image Section -->
+                <div class="animate-fade-in-right">
+                    <div class="relative">
+                        <!-- Glow Effect -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-accent/10 blur-3xl -z-10 scale-110"></div>
+
+                        <!-- Professional Card -->
+                        <div class="professional-card p-8 relative overflow-hidden rounded-2xl">
+                            <!-- Subtle background pattern -->
+                            <div class="absolute inset-0 opacity-5">
+                                <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, hsl(0, 72%, 51%, 0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, hsl(348, 83%, 47%, 0.1) 0%, transparent 50%);">
+                                </div>
+                            </div>
+
+                            <div class="relative overflow-hidden rounded-xl z-10">
+                                <img src="src/assets/entrepreneur-hero.jpg" alt="Alex Chen - Business Entrepreneur" class="w-full h-auto object-cover transition-transform duration-700 hover:scale-105" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=800&fit=crop&crop=face'" />
+
+                                <!-- Elegant Overlay -->
+                                <div class="absolute inset-0 bg-gradient-to-t from-white/10 via-transparent to-transparent"></div>
+
+                                <!-- Red accent border -->
+                                <div class="absolute inset-0 border-2 border-primary/20 rounded-xl"></div>
+                            </div>
+
+                            <!-- Status Indicator -->
+                            <div class="flex items-center justify-center mt-6 z-10 relative">
+                                <div class="flex items-center space-x-2 px-4 py-2 bg-accent/5 rounded-full border border-accent/20 backdrop-blur-sm">
+                                    <div class="w-2 h-2 bg-accent rounded-full animate-pulse-glow"></div>
+                                    <span class="text-sm font-medium text-accent">Available for new opportunities</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-fade-in-up">
+                <div class="flex flex-col items-center space-y-2 text-muted-foreground">
+                    <span class="text-sm font-medium">Scroll to explore</span>
+                    <div class="w-px h-16 bg-gradient-to-b from-gray-400 to-transparent"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-section">
+
+    
+    <!-- Background Animation (Particles) -->
+    <div class="background-animation">
+        <!-- Particles -->
+        <div class="particle particle1 circle" style="left: 10%; top: 15%; animation-delay: 0s;"></div>
+        <div class="particle particle2 square" style="left: 30%; top: 50%; animation-delay: 2s;"></div>
+        <div class="particle particle3 triangle" style="left: 50%; top: 30%; animation-delay: 4s;"></div>
+        <div class="particle particle4 circle" style="left: 70%; top: 70%; animation-delay: 6s;"></div>
+        <div class="particle particle5 square" style="left: 80%; top: 40%; animation-delay: 8s;"></div>
+        <div class="particle particle6 triangle" style="left: 90%; top: 20%; animation-delay: 10s;"></div>
+        <div class="particle particle1 circle" style="left: 10%; top: 15%; animation-delay: 0s;"></div>
+        <div class="particle particle2 square" style="left: 30%; top: 50%; animation-delay: 2s;"></div>
+        <div class="particle particle3 triangle" style="left: 50%; top: 30%; animation-delay: 4s;"></div>
+        <div class="particle particle4 circle" style="left: 70%; top: 70%; animation-delay: 6s;"></div>
+        <div class="particle particle5 square" style="left: 80%; top: 40%; animation-delay: 8s;"></div>
+        <div class="particle particle6 triangle" style="left: 90%; top: 20%; animation-delay: 10s;"></div>
+        <div class="particle particle1 circle" style="left: 10%; top: 15%; animation-delay: 0s;"></div>
+        <div class="particle particle2 square" style="left: 30%; top: 50%; animation-delay: 2s;"></div>
+        <div class="particle particle3 triangle" style="left: 50%; top: 30%; animation-delay: 4s;"></div>
+        <div class="particle particle4 circle" style="left: 70%; top: 70%; animation-delay: 6s;"></div>
+        <div class="particle particle5 square" style="left: 80%; top: 40%; animation-delay: 8s;"></div>
+        <div class="particle particle6 triangle" style="left: 90%; top: 20%; animation-delay: 10s;"></div>
+        
+        <!-- More particles can be added if desired -->
+    </div>
+
+    <!-- Main Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Main Card -->
+        <div id="main-card" class="relative z-10 max-w-4xl mx-auto p-8 opacity-0 scale-95 transition-all duration-1000 animate-fade-in">
+            <!-- Holographic Card Border -->
+            <div class="relative group">
+                <!-- Card Content -->
+                <div class="relative card-glow rounded-2xl p-12 border border-gray-300/40 overflow-hidden">
+                    <!-- Title -->
+                    <div class="relative mb-8">
+                        <h1 class="text-5xl font-semibold text-primary mb-2">
+                            ABOUT ME
+                        </h1>
+                        <div class="h-1 w-32 bg-primary rounded-full"></div>
+                    </div>
+
+                    <!-- Bio Text with Typewriter Effect -->
+                    <div class="relative">
+                        <p id="bio-text" class="text-xl leading-relaxed text-secondary font-mono opacity-0 transition-opacity duration-500">
+                            <span class="typewriter-container">
+                                <span id="typewriter" class="typewriter-text animate-typewriter">
+                                    I'm a digital architect crafting experiences at the intersection of technology and innovation. Specializing in high-performance computing and system architecture, I create solutions that drive business growth and improve user experience.
+                                </span>
+                            </span>
+                        </p>
+                    </div>
+
+                    <!-- Tags -->
+                    <div class="mt-8 flex gap-4 flex-wrap">
+                        <div class="tag group">
+                            <span class="inline-block px-4 py-2 bg-blue-100 border border-blue-500/40 rounded-lg text-blue-600 font-mono text-sm">
+                                &lt;innovator/&gt;
+                            </span>
+                        </div>
+                        <div class="tag group">
+                            <span class="inline-block px-4 py-2 bg-green-100 border border-green-500/40 rounded-lg text-green-600 font-mono text-sm">
+                                architect.digital
+                            </span>
+                        </div>
+                        <div class="tag group">
+                            <span class="inline-block px-4 py-2 bg-gray-100 border border-gray-500/40 rounded-lg text-gray-600 font-mono text-sm">
+                                tech.builder
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Status Indicator -->
+                    <div class="absolute top-4 right-4 flex items-center gap-2">
+                        <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                        <span class="text-xs font-mono text-green-600 uppercase tracking-wider">Online</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6 projects-section">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+                    Featured Projects
+                </h2>
+                <p class="text-xl text-muted-foreground max-w-2xl mx-auto">
+                    A showcase of ventures that have created meaningful impact and driven innovation across multiple industries.
+                </p>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="professional-card p-8 project-card rounded-2xl cursor-pointer">
+                    <!-- Project Header -->
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center space-x-2">
+                            <i data-lucide="calendar" class="w-4 h-4 text-muted-foreground"></i>
+                            <span class="text-sm text-muted-foreground font-medium">2020-Present</span>
+                        </div>
+                        <i data-lucide="arrow-up-right" class="w-5 h-5 text-muted-foreground project-arrow transition-all duration-300"></i>
+                    </div>
+
+                    <!-- Project Content -->
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 project-title transition-colors duration-300">
+                                TechStartup Accelerator
+                            </h3>
+                            <span class="inline-block px-3 py-1 text-xs font-medium bg-accent/10 text-accent rounded-full border border-accent/20">
+                                Venture Capital
+                            </span>
+                        </div>
+
+                        <p class="text-muted-foreground leading-relaxed">
+                            Founded and scaled a tech accelerator program that has supported 50+ startups, raising over $100M in combined funding.
+                        </p>
+
+                        <!-- Impact Metrics -->
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-200">
+                            <div class="flex items-center space-x-2">
+                                <i data-lucide="users" class="w-4 h-4 text-primary"></i>
+                                <span class="text-sm font-semibold text-primary">50+ Startups</span>
+                            </div>
+                            <span class="text-xs px-2 py-1 rounded-full font-medium bg-accent/10 text-accent">
+                                Active
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="professional-card p-8 project-card rounded-2xl cursor-pointer">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center space-x-2">
+                            <i data-lucide="calendar" class="w-4 h-4 text-muted-foreground"></i>
+                            <span class="text-sm text-muted-foreground font-medium">2018-2022</span>
+                        </div>
+                        <i data-lucide="arrow-up-right" class="w-5 h-5 text-muted-foreground project-arrow transition-all duration-300"></i>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 project-title transition-colors duration-300">
+                                GreenTech Solutions
+                            </h3>
+                            <span class="inline-block px-3 py-1 text-xs font-medium bg-accent/10 text-accent rounded-full border border-accent/20">
+                                Clean Energy
+                            </span>
+                        </div>
+
+                        <p class="text-muted-foreground leading-relaxed">
+                            Co-founded sustainable technology company focused on renewable energy solutions for urban environments.
+                        </p>
+
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-200">
+                            <div class="flex items-center space-x-2">
+                                <i data-lucide="trending-up" class="w-4 h-4 text-primary"></i>
+                                <span class="text-sm font-semibold text-primary">$50M Revenue</span>
+                            </div>
+                            <span class="text-xs px-2 py-1 rounded-full font-medium bg-primary/10 text-primary">
+                                Acquired
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="professional-card p-8 project-card rounded-2xl cursor-pointer">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center space-x-2">
+                            <i data-lucide="calendar" class="w-4 h-4 text-muted-foreground"></i>
+                            <span class="text-sm text-muted-foreground font-medium">2018-2022</span>
+                        </div>
+                        <i data-lucide="arrow-up-right" class="w-5 h-5 text-muted-foreground project-arrow transition-all duration-300"></i>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 project-title transition-colors duration-300">
+                                GreenTech Solutions
+                            </h3>
+                            <span class="inline-block px-3 py-1 text-xs font-medium bg-accent/10 text-accent rounded-full border border-accent/20">
+                                Clean Energy
+                            </span>
+                        </div>
+
+                        <p class="text-muted-foreground leading-relaxed">
+                            Co-founded sustainable technology company focused on renewable energy solutions for urban environments.
+                        </p>
+
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-200">
+                            <div class="flex items-center space-x-2">
+                                <i data-lucide="trending-up" class="w-4 h-4 text-primary"></i>
+                                <span class="text-sm font-semibold text-primary">$50M Revenue</span>
+                            </div>
+                            <span class="text-xs px-2 py-1 rounded-full font-medium bg-primary/10 text-primary">
+                                Acquired
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+     <script>
+        // Card and text animations
+        window.addEventListener('load', () => {
+            // Start typewriter effect
+            setTimeout(() => {
+                const bioText = document.getElementById('bio-text');
+                const typewriter = document.getElementById('typewriter');
+                bioText.style.opacity = '1';
+                typewriter.classList.add('animate-typewriter');
+            }, 500);
+        });
+    </script>
+    <script src="script.js"></script>
+    <script src="about.js"></script>
+</body>
+
+
+</html>
