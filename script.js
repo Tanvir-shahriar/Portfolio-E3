@@ -359,6 +359,168 @@ function initVenturesGrid() {
     renderGrid();
 }
 
+function initSlideshow() {
+    const container = qs('#slideshow');
+    if (!container) {
+        return;
+    }
+
+    const slides = [
+        {
+            image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1920&q=80',
+            title: 'Digital Workspace',
+            description: 'Clean code, modern tools, endless possibilities'
+        },
+        {
+            image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80',
+            title: 'Architectural Vision',
+            description: 'Where form meets function in perfect harmony'
+        },
+        {
+            image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80',
+            title: 'Natural Serenity',
+            description: 'Finding inspiration in the untouched wilderness'
+        },
+        {
+            image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80',
+            title: 'Product Design',
+            description: 'Minimalist elegance in every detail'
+        }
+    ];
+
+    const autoplayInterval = 6000;
+    let currentSlide = 0;
+    let isPaused = false;
+    let progress = 0;
+
+    const chevronLeft = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>';
+    const chevronRight = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
+
+    slides.forEach((slide, index) => {
+        const slideEl = document.createElement('div');
+        slideEl.className = `slide ${index === 0 ? 'active' : ''}`;
+        slideEl.setAttribute('aria-hidden', index !== 0);
+        slideEl.innerHTML = `
+            <img src="${slide.image}" alt="${slide.title}" class="slide-image" ${index === 0 ? '' : 'loading="lazy"'}>
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <h2 class="slide-title">${slide.title}</h2>
+                <p class="slide-description">${slide.description}</p>
+            </div>
+        `;
+        container.appendChild(slideEl);
+    });
+
+    const navArrows = document.createElement('div');
+    navArrows.className = 'nav-arrows';
+    navArrows.innerHTML = `
+        <button class="nav-arrow" id="prevBtn" aria-label="Previous slide">${chevronLeft}</button>
+        <button class="nav-arrow" id="nextBtn" aria-label="Next slide">${chevronRight}</button>
+    `;
+    container.appendChild(navArrows);
+
+    const counter = document.createElement('div');
+    counter.className = 'slide-counter';
+    counter.id = 'slideCounter';
+    counter.innerHTML = `<span>01</span><span class="mx-2">/</span><span>${String(slides.length).padStart(2, '0')}</span>`;
+    container.appendChild(counter);
+
+    const navDots = document.createElement('div');
+    navDots.className = 'nav-dots';
+    navDots.setAttribute('role', 'tablist');
+    navDots.setAttribute('aria-label', 'Slide navigation');
+    slides.forEach((_, index) => {
+        const dot = document.createElement('button');
+        dot.className = `nav-dot ${index === 0 ? 'active' : ''}`;
+        dot.setAttribute('role', 'tab');
+        dot.setAttribute('aria-selected', index === 0);
+        dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+        dot.addEventListener('click', () => goToSlide(index));
+        navDots.appendChild(dot);
+    });
+    container.appendChild(navDots);
+
+    const progressBar = document.createElement('div');
+    progressBar.className = 'progress-bar';
+    progressBar.innerHTML = '<div class="progress-bar-fill" id="progressFill"></div>';
+    container.appendChild(progressBar);
+
+    const prevBtn = qs('#prevBtn', container);
+    const nextBtn = qs('#nextBtn', container);
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+
+    container.addEventListener('mouseenter', () => {
+        isPaused = true;
+    });
+    container.addEventListener('mouseleave', () => {
+        isPaused = false;
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowLeft') prevSlide();
+        if (event.key === 'ArrowRight') nextSlide();
+    });
+
+    function updateSlide() {
+        const slideEls = qsa('.slide', container);
+        const dotEls = qsa('.nav-dot', container);
+
+        slideEls.forEach((el, index) => {
+            el.classList.toggle('active', index === currentSlide);
+            el.setAttribute('aria-hidden', index !== currentSlide);
+        });
+
+        dotEls.forEach((el, index) => {
+            el.classList.toggle('active', index === currentSlide);
+            el.setAttribute('aria-selected', index === currentSlide);
+        });
+
+        counter.innerHTML = `
+            <span>${String(currentSlide + 1).padStart(2, '0')}</span>
+            <span class="mx-2">/</span>
+            <span>${String(slides.length).padStart(2, '0')}</span>
+        `;
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        progress = 0;
+        updateSlide();
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        progress = 0;
+        updateSlide();
+    }
+
+    function goToSlide(index) {
+        currentSlide = index;
+        progress = 0;
+        updateSlide();
+    }
+
+    function startAutoplay() {
+        setInterval(() => {
+            if (isPaused) return;
+
+            progress += (100 / (autoplayInterval / 50));
+            const fill = qs('#progressFill', container);
+            if (fill) {
+                fill.style.width = `${progress}%`;
+            }
+
+            if (progress >= 100) {
+                nextSlide();
+                progress = 0;
+            }
+        }, 50);
+    }
+
+    startAutoplay();
+}
+
 function initFooter() {
     const year = qs('#year');
     if (year) {
@@ -425,5 +587,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeroScrollEffects();
     initAwardsHover();
     initVenturesGrid();
+    initSlideshow();
     initFooter();
 });
