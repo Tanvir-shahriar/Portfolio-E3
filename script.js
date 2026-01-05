@@ -367,22 +367,32 @@ function initSlideshow() {
 
     const slides = [
         {
-            image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1920&q=80',
+            image: 'images/1.jpg',
             title: 'Digital Workspace',
             description: 'Clean code, modern tools, endless possibilities'
         },
         {
-            image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80',
+            image: 'images/2.jpg',
             title: 'Architectural Vision',
             description: 'Where form meets function in perfect harmony'
         },
         {
-            image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80',
+            image: 'images/3.jpg',
             title: 'Natural Serenity',
             description: 'Finding inspiration in the untouched wilderness'
         },
         {
-            image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80',
+            image: 'images/4.png',
+            title: 'Product Design',
+            description: 'Minimalist elegance in every detail'
+        },
+         {
+            image: 'images/5.jpg',
+            title: 'Product Design',
+            description: 'Minimalist elegance in every detail'
+        },
+         {
+            image: 'images/6.jpg',
             title: 'Product Design',
             description: 'Minimalist elegance in every detail'
         }
