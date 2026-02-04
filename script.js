@@ -588,6 +588,38 @@ function initFooter() {
     }
 }
 
+function initMap() {
+    const map = L.map('map').setView([23.54, 89.17], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    L.marker([23.54, 89.17]).addTo(map)
+        .bindPopup('Jhenaidah')
+        .openPopup();
+
+    map.locate({setView: true, maxZoom: 16});
+
+    function onLocationFound(e) {
+        const radius = e.accuracy / 2;
+
+        L.marker(e.latlng).addTo(map)
+            .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+        L.circle(e.latlng, radius).addTo(map);
+    }
+
+    map.on('locationfound', onLocationFound);
+
+    function onLocationError(e) {
+        alert(e.message);
+    }
+
+    map.on('locationerror', onLocationError);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     initMenu();
     initSmoothAnchors();
@@ -599,4 +631,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initVenturesGrid();
     initSlideshow();
     initFooter();
+    initMap();
 });
