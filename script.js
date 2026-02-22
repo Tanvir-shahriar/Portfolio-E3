@@ -275,7 +275,7 @@ function initVenturesGrid() {
                     <div class="relative z-10 p-8 flex flex-col h-full">
                         <div class="flex justify-between items-start mb-6">
                             <div class="p-3 rounded-2xl ${config.bg} ${config.border} border shadow-inner">
-                                <i data-lucide="${config.icon}" class="w-6 h-6 ${config.color}"></i>
+                                <i data-lucide="${config.icon}" class="w-6 h-6 ${config.color} icon-hover-effect"></i>
                             </div>
                             <span class="text-xs font-bold font-mono text-slate-400 bg-white/80 px-2 py-1 rounded border border-slate-100">
                                 0${venture.id}
